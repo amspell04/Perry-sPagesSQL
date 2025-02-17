@@ -1,0 +1,1139 @@
+el_grade,module_num,student_teacher,materials,copy_num,available
+2,1,Teacher,"- Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",1,TRUE
+2,1,Teacher,"- Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",2,TRUE
+2,2,Teacher,"- Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",1,TRUE
+2,2,Teacher,"- Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",2,TRUE
+2,3,Teacher,"- Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",1,TRUE
+2,3,Teacher,"- Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",2,TRUE
+2,4,Teacher,"- Hey, Little Ant, Little Hummingbird, Lizard and the Sun, Ant and the Grasshopper, Place for Bats, Place for Butterflies, Teacher Manuals",1,TRUE
+2,4,Teacher,"- Hey, Little Ant, Little Hummingbird, Lizard and the Sun, Ant and the Grasshopper, Place for Bats, Place for Butterflies, Teacher Manuals",2,TRUE
+2,1,Student,Dot,1,TRUE
+2,1,Student,Dot,2,TRUE
+2,1,Student,Dot,3,TRUE
+2,1,Student,Dot,4,TRUE
+2,1,Student,Dot,5,TRUE
+2,1,Student,Dot,6,TRUE
+2,1,Student,Dot,7,TRUE
+2,1,Student,Dot,8,TRUE
+2,1,Student,Dot,9,TRUE
+2,1,Student,Dot,10,TRUE
+2,1,Student,Dot,11,TRUE
+2,1,Student,Dot,12,TRUE
+2,1,Student,Dot,13,TRUE
+2,1,Student,Dot,14,TRUE
+2,1,Student,Off to Class,1,TRUE
+2,1,Student,Off to Class,2,TRUE
+2,1,Student,Off to Class,3,TRUE
+2,1,Student,Off to Class,4,TRUE
+2,1,Student,Off to Class,5,TRUE
+2,1,Student,Off to Class,6,TRUE
+2,1,Student,Off to Class,7,TRUE
+2,1,Student,Off to Class,8,TRUE
+2,1,Student,Off to Class,9,TRUE
+2,1,Student,Off to Class,10,TRUE
+2,1,Student,The Invisible Boy,1,TRUE
+2,1,Student,The Invisible Boy,2,TRUE
+2,1,Student,The Invisible Boy,3,TRUE
+2,1,Student,The Invisible Boy,4,TRUE
+2,1,Student,The Invisible Boy,5,TRUE
+2,1,Student,The Invisible Boy,6,TRUE
+2,1,Student,The Invisible Boy,7,TRUE
+2,1,Student,The Invisible Boy,8,TRUE
+2,1,Student,The Invisible Boy,9,TRUE
+2,1,Student,The Invisible Boy,10,TRUE
+2,2,Student,The Dog That Dug For Dinos,1,TRUE
+2,2,Student,The Dog That Dug For Dinos,2,TRUE
+2,2,Student,The Dog That Dug For Dinos,3,TRUE
+2,2,Student,The Dog That Dug For Dinos,4,TRUE
+2,2,Student,The Dog That Dug For Dinos,5,TRUE
+2,2,Student,The Dog That Dug For Dinos,6,TRUE
+2,2,Student,The Dog That Dug For Dinos,7,TRUE
+2,2,Student,The Dog That Dug For Dinos,8,TRUE
+2,2,Student,The Dog That Dug For Dinos,9,TRUE
+2,2,Student,The Dog That Dug For Dinos,10,TRUE
+2,2,Student,The Dog That Dug For Dinos,11,TRUE
+2,2,Student,The Dog That Dug For Dinos,12,TRUE
+2,2,Student,The Dog That Dug For Dinos,13,TRUE
+2,2,Student,The Dog That Dug For Dinos,14,TRUE
+2,2,Student,The Dog That Dug For Dinos,15,TRUE
+2,2,Student,The Dog That Dug For Dinos,16,TRUE
+2,2,Student,The Dog That Dug For Dinos,17,TRUE
+2,2,Student,The Dog That Dug For Dinos,18,TRUE
+2,2,Student,The Dog That Dug For Dinos,19,TRUE
+2,2,Student,The Dog That Dug For Dinos,20,TRUE
+2,2,Student,The Dog That Dug For Dinos,21,TRUE
+2,2,Student,The Dog That Dug For Dinos,22,TRUE
+2,2,Student,The Dog That Dug For Dinos,23,TRUE
+2,2,Student,The Dog That Dug For Dinos,24,TRUE
+2,2,Student,The Dog That Dug For Dinos,25,TRUE
+2,2,Student,The Dog That Dug For Dinos,26,TRUE
+2,2,Student,The Dog That Dug For Dinos,27,TRUE
+2,2,Student,The Dog That Dug For Dinos,28,TRUE
+2,2,Student,The Dog That Dug For Dinos,29,TRUE
+2,2,Student,The Dog That Dug For Dinos,30,TRUE
+2,2,Student,The Dog That Dug For Dinos,31,TRUE
+2,2,Student,The Dog That Dug For Dinos,32,TRUE
+2,2,Student,The Dog That Dug For Dinos,33,TRUE
+2,2,Student,The Dog That Dug For Dinos,34,TRUE
+2,2,Student,The Dog That Dug For Dinos,35,TRUE
+2,2,Student,The Dog That Dug For Dinos,36,TRUE
+2,2,Student,Stone Girl Bone Girl,1,TRUE
+2,2,Student,Stone Girl Bone Girl,2,TRUE
+2,2,Student,Stone Girl Bone Girl,3,TRUE
+2,2,Student,Stone Girl Bone Girl,4,TRUE
+2,2,Student,Stone Girl Bone Girl,5,TRUE
+2,2,Student,Stone Girl Bone Girl,6,TRUE
+2,2,Student,Stone Girl Bone Girl,7,TRUE
+2,2,Student,Stone Girl Bone Girl,8,TRUE
+2,2,Student,Stone Girl Bone Girl,9,TRUE
+2,2,Student,Stone Girl Bone Girl,10,TRUE
+2,2,Student,Stone Girl Bone Girl,11,TRUE
+2,2,Student,Stone Girl Bone Girl,12,TRUE
+2,2,Student,Stone Girl Bone Girl,13,TRUE
+2,2,Student,Stone Girl Bone Girl,14,TRUE
+2,2,Student,Stone Girl Bone Girl,15,TRUE
+2,2,Student,Stone Girl Bone Girl,16,TRUE
+2,2,Student,Stone Girl Bone Girl,17,TRUE
+2,2,Student,Stone Girl Bone Girl,18,TRUE
+2,2,Student,Stone Girl Bone Girl,19,TRUE
+2,2,Student,Stone Girl Bone Girl,20,TRUE
+2,2,Student,Stone Girl Bone Girl,21,TRUE
+2,2,Student,Stone Girl Bone Girl,22,TRUE
+2,2,Student,Stone Girl Bone Girl,23,TRUE
+2,2,Student,Stone Girl Bone Girl,24,TRUE
+2,2,Student,Stone Girl Bone Girl,25,TRUE
+2,2,Student,Stone Girl Bone Girl,26,TRUE
+2,2,Student,Stone Girl Bone Girl,27,TRUE
+2,2,Student,Stone Girl Bone Girl,28,TRUE
+2,2,Student,Stone Girl Bone Girl,29,TRUE
+2,2,Student,Stone Girl Bone Girl,30,TRUE
+2,2,Student,Stone Girl Bone Girl,31,TRUE
+2,2,Student,Stone Girl Bone Girl,32,TRUE
+2,2,Student,Stone Girl Bone Girl,33,TRUE
+2,2,Student,Stone Girl Bone Girl,34,TRUE
+2,2,Student,Stone Girl Bone Girl,35,TRUE
+2,2,Student,Stone Girl Bone Girl,36,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,1,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,2,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,3,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,4,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,5,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,6,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,7,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,8,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,9,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,10,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,11,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,12,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,13,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,14,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,15,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,16,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,17,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,18,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,19,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,20,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,21,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,22,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,23,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,24,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,25,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,26,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,27,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,28,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,29,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,30,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,31,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,32,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,33,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,34,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,35,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,36,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,37,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,38,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,39,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,40,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,41,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,42,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,43,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,44,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,45,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,46,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,47,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,48,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,49,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,50,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,51,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,52,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,53,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,54,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,55,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,56,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,57,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,58,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,59,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,60,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,61,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,62,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,63,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,64,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,65,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,66,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,67,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,68,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,69,TRUE
+2,3,Student,National Geographic Readers: Seed to Plant,70,TRUE
+2,3,Student,From Seed to Plant,1,TRUE
+2,3,Student,From Seed to Plant,2,TRUE
+2,3,Student,From Seed to Plant,3,TRUE
+2,3,Student,From Seed to Plant,4,TRUE
+2,3,Student,From Seed to Plant,5,TRUE
+2,3,Student,From Seed to Plant,6,TRUE
+2,3,Student,From Seed to Plant,7,TRUE
+2,3,Student,From Seed to Plant,8,TRUE
+2,3,Student,From Seed to Plant,9,TRUE
+2,3,Student,From Seed to Plant,10,TRUE
+2,3,Student,From Seed to Plant,11,TRUE
+2,3,Student,From Seed to Plant,12,TRUE
+2,3,Student,From Seed to Plant,13,TRUE
+2,3,Student,From Seed to Plant,14,TRUE
+2,3,Student,From Seed to Plant,15,TRUE
+2,3,Student,From Seed to Plant,16,TRUE
+2,3,Student,From Seed to Plant,17,TRUE
+2,3,Student,From Seed to Plant,18,TRUE
+2,3,Student,From Seed to Plant,19,TRUE
+2,3,Student,From Seed to Plant,20,TRUE
+2,3,Student,From Seed to Plant,21,TRUE
+2,3,Student,From Seed to Plant,22,TRUE
+2,3,Student,From Seed to Plant,23,TRUE
+2,3,Student,From Seed to Plant,24,TRUE
+2,3,Student,From Seed to Plant,25,TRUE
+2,3,Student,From Seed to Plant,26,TRUE
+2,3,Student,From Seed to Plant,27,TRUE
+2,3,Student,From Seed to Plant,28,TRUE
+2,3,Student,From Seed to Plant,29,TRUE
+2,3,Student,From Seed to Plant,30,TRUE
+2,3,Student,From Seed to Plant,31,TRUE
+2,3,Student,From Seed to Plant,32,TRUE
+2,3,Student,From Seed to Plant,33,TRUE
+2,3,Student,From Seed to Plant,34,TRUE
+2,3,Student,From Seed to Plant,35,TRUE
+2,3,Student,From Seed to Plant,36,TRUE
+2,3,Student,From Seed to Plant,37,TRUE
+2,3,Student,From Seed to Plant,38,TRUE
+2,3,Student,From Seed to Plant,39,TRUE
+2,3,Student,From Seed to Plant,40,TRUE
+2,3,Student,From Seed to Plant,41,TRUE
+2,3,Student,From Seed to Plant,42,TRUE
+2,3,Student,What is Pollination?,1,TRUE
+2,3,Student,What is Pollination?,2,TRUE
+2,3,Student,What is Pollination?,3,TRUE
+2,3,Student,What is Pollination?,4,TRUE
+2,3,Student,What is Pollination?,5,TRUE
+2,3,Student,What is Pollination?,6,TRUE
+2,3,Student,What is Pollination?,7,TRUE
+2,3,Student,What is Pollination?,8,TRUE
+2,3,Student,What is Pollination?,9,TRUE
+2,3,Student,What is Pollination?,10,TRUE
+2,3,Student,What is Pollination?,11,TRUE
+2,3,Student,What is Pollination?,12,TRUE
+2,3,Student,What is Pollination?,13,TRUE
+2,3,Student,What is Pollination?,14,TRUE
+2,3,Student,What is Pollination?,15,TRUE
+2,3,Student,What is Pollination?,16,TRUE
+2,3,Student,What is Pollination?,17,TRUE
+2,3,Student,What is Pollination?,18,TRUE
+2,3,Student,What is Pollination?,19,TRUE
+2,3,Student,What is Pollination?,20,TRUE
+2,3,Student,What is Pollination?,21,TRUE
+2,3,Student,What is Pollination?,22,TRUE
+2,3,Student,What is Pollination?,23,TRUE
+2,3,Student,What is Pollination?,24,TRUE
+2,3,Student,What is Pollination?,25,TRUE
+2,3,Student,What is Pollination?,26,TRUE
+2,3,Student,What is Pollination?,27,TRUE
+2,3,Student,What is Pollination?,28,TRUE
+2,3,Student,What is Pollination?,29,TRUE
+2,3,Student,What is Pollination?,30,TRUE
+2,3,Student,What is Pollination?,31,TRUE
+2,3,Student,What is Pollination?,32,TRUE
+2,3,Student,What is Pollination?,33,TRUE
+2,3,Student,What is Pollination?,34,TRUE
+2,3,Student,What is Pollination?,35,TRUE
+2,3,Student,What is Pollination?,36,TRUE
+2,3,Student,What is Pollination?,37,TRUE
+2,3,Student,What is Pollination?,38,TRUE
+2,3,Student,What is Pollination?,39,TRUE
+2,3,Student,What is Pollination?,40,TRUE
+2,3,Student,What is Pollination?,41,TRUE
+2,3,Student,What is Pollination?,42,TRUE
+2,4,Student,"Hey, Little Ant",1,TRUE
+2,4,Student,"Hey, Little Ant",2,TRUE
+2,4,Student,"Hey, Little Ant",3,TRUE
+2,4,Student,"Hey, Little Ant",4,TRUE
+2,4,Student,"Hey, Little Ant",5,TRUE
+2,4,Student,"Hey, Little Ant",6,TRUE
+2,4,Student,"Hey, Little Ant",7,TRUE
+2,4,Student,"Hey, Little Ant",8,TRUE
+2,4,Student,"Hey, Little Ant",9,TRUE
+2,4,Student,"Hey, Little Ant",10,TRUE
+2,4,Student,"Hey, Little Ant",11,TRUE
+2,4,Student,"Hey, Little Ant",12,TRUE
+2,4,Student,"Hey, Little Ant",13,TRUE
+2,4,Student,"Hey, Little Ant",14,TRUE
+2,4,Student,Ant and the Grasshopper,1,TRUE
+2,4,Student,Ant and the Grasshopper,2,TRUE
+2,4,Student,Ant and the Grasshopper,3,TRUE
+2,4,Student,Ant and the Grasshopper,4,TRUE
+2,4,Student,Ant and the Grasshopper,5,TRUE
+2,4,Student,Ant and the Grasshopper,6,TRUE
+2,4,Student,Ant and the Grasshopper,7,TRUE
+2,4,Student,Ant and the Grasshopper,8,TRUE
+2,4,Student,Ant and the Grasshopper,9,TRUE
+2,4,Student,Ant and the Grasshopper,10,TRUE
+2,4,Student,Ant and the Grasshopper,11,TRUE
+2,4,Student,Ant and the Grasshopper,12,TRUE
+2,4,Student,Ant and the Grasshopper,13,TRUE
+2,4,Student,Ant and the Grasshopper,14,TRUE
+2,4,Student,Ant and the Grasshopper,15,TRUE
+2,4,Student,Ant and the Grasshopper,16,TRUE
+2,4,Student,Ant and the Grasshopper,17,TRUE
+2,4,Student,Ant and the Grasshopper,18,TRUE
+2,4,Student,Ant and the Grasshopper,19,TRUE
+2,4,Student,Ant and the Grasshopper,20,TRUE
+2,4,Student,Ant and the Grasshopper,21,TRUE
+2,4,Student,Ant and the Grasshopper,22,TRUE
+2,4,Student,Ant and the Grasshopper,23,TRUE
+2,4,Student,Ant and the Grasshopper,24,TRUE
+2,4,Student,Ant and the Grasshopper,25,TRUE
+2,4,Student,Ant and the Grasshopper,26,TRUE
+2,4,Student,Ant and the Grasshopper,27,TRUE
+2,4,Student,Ant and the Grasshopper,28,TRUE
+2,4,Student,Ant and the Grasshopper,29,TRUE
+2,4,Student,Ant and the Grasshopper,30,TRUE
+2,4,Student,Ant and the Grasshopper,31,TRUE
+2,4,Student,Ant and the Grasshopper,32,TRUE
+2,4,Student,Ant and the Grasshopper,33,TRUE
+2,4,Student,Ant and the Grasshopper,34,TRUE
+2,4,Student,Ant and the Grasshopper,35,TRUE
+2,4,Student,Ant and the Grasshopper,36,TRUE
+2,4,Student,Ant and the Grasshopper,37,TRUE
+2,4,Student,Ant and the Grasshopper,38,TRUE
+2,4,Student,Ant and the Grasshopper,39,TRUE
+2,4,Student,Ant and the Grasshopper,40,TRUE
+2,4,Student,Ant and the Grasshopper,41,TRUE
+2,4,Student,Ant and the Grasshopper,42,TRUE
+2,4,Student,Ant and the Grasshopper,43,TRUE
+2,4,Student,Ant and the Grasshopper,44,TRUE
+2,4,Student,Ant and the Grasshopper,45,TRUE
+2,4,Student,Ant and the Grasshopper,46,TRUE
+2,4,Student,Ant and the Grasshopper,47,TRUE
+2,4,Student,Ant and the Grasshopper,48,TRUE
+2,4,Student,Ant and the Grasshopper,49,TRUE
+2,4,Student,Ant and the Grasshopper,50,TRUE
+2,4,Student,Ant and the Grasshopper,51,TRUE
+2,4,Student,Ant and the Grasshopper,52,TRUE
+2,4,Student,Ant and the Grasshopper,53,TRUE
+2,4,Student,Ant and the Grasshopper,54,TRUE
+2,4,Student,Ant and the Grasshopper,55,TRUE
+2,4,Student,Ant and the Grasshopper,56,TRUE
+2,4,Student,Ant and the Grasshopper,57,TRUE
+2,4,Student,Ant and the Grasshopper,58,TRUE
+2,4,Student,Ant and the Grasshopper,59,TRUE
+2,4,Student,Ant and the Grasshopper,60,TRUE
+2,4,Student,Ant and the Grasshopper,61,TRUE
+2,4,Student,Ant and the Grasshopper,62,TRUE
+2,4,Student,Ant and the Grasshopper,63,TRUE
+2,4,Student,Ant and the Grasshopper,64,TRUE
+2,4,Student,Ant and the Grasshopper,65,TRUE
+2,4,Student,Ant and the Grasshopper,66,TRUE
+2,4,Student,Ant and the Grasshopper,67,TRUE
+2,4,Student,Ant and the Grasshopper,68,TRUE
+2,4,Student,Ant and the Grasshopper,69,TRUE
+2,4,Student,Ant and the Grasshopper,70,TRUE
+2,4,Student,"Place for Bats, Revised Edition",1,TRUE
+2,4,Student,"Place for Bats, Revised Edition",2,TRUE
+2,4,Student,"Place for Bats, Revised Edition",3,TRUE
+2,4,Student,"Place for Bats, Revised Edition",4,TRUE
+2,4,Student,"Place for Bats, Revised Edition",5,TRUE
+2,4,Student,"Place for Bats, Revised Edition",6,TRUE
+2,4,Student,"Place for Bats, Revised Edition",7,TRUE
+2,4,Student,"Place for Bats, Revised Edition",8,TRUE
+2,4,Student,"Place for Bats, Revised Edition",9,TRUE
+2,4,Student,"Place for Bats, Revised Edition",10,TRUE
+2,4,Student,"Place for Bats, Revised Edition",11,TRUE
+2,4,Student,"Place for Bats, Revised Edition",12,TRUE
+2,4,Student,"Place for Bats, Revised Edition",13,TRUE
+2,4,Student,"Place for Bats, Revised Edition",14,TRUE
+2,4,Student,"Place for Bats, Revised Edition",15,TRUE
+2,4,Student,"Place for Bats, Revised Edition",16,TRUE
+2,4,Student,"Place for Bats, Revised Edition",17,TRUE
+2,4,Student,"Place for Bats, Revised Edition",18,TRUE
+2,4,Student,"Place for Bats, Revised Edition",19,TRUE
+2,4,Student,"Place for Bats, Revised Edition",20,TRUE
+2,4,Student,"Place for Bats, Revised Edition",21,TRUE
+2,4,Student,"Place for Bats, Revised Edition",22,TRUE
+2,4,Student,"Place for Bats, Revised Edition",23,TRUE
+2,4,Student,"Place for Bats, Revised Edition",24,TRUE
+2,4,Student,"Place for Bats, Revised Edition",25,TRUE
+2,4,Student,"Place for Bats, Revised Edition",26,TRUE
+2,4,Student,"Place for Bats, Revised Edition",27,TRUE
+2,4,Student,"Place for Bats, Revised Edition",28,TRUE
+2,4,Student,"Place for Bats, Revised Edition",29,TRUE
+2,4,Student,"Place for Bats, Revised Edition",30,TRUE
+2,4,Student,"Place for Bats, Revised Edition",31,TRUE
+2,4,Student,"Place for Bats, Revised Edition",32,TRUE
+2,4,Student,"Place for Bats, Revised Edition",33,TRUE
+2,4,Student,"Place for Bats, Revised Edition",34,TRUE
+2,4,Student,"Place for Bats, Revised Edition",35,TRUE
+2,4,Student,"Place for Bats, Revised Edition",36,TRUE
+2,4,Student,"Place for Bats, Revised Edition",37,TRUE
+2,4,Student,"Place for Bats, Revised Edition",38,TRUE
+2,4,Student,"Place for Bats, Revised Edition",39,TRUE
+2,4,Student,"Place for Bats, Revised Edition",40,TRUE
+2,4,Student,"Place for Bats, Revised Edition",41,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",1,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",2,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",3,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",4,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",5,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",6,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",7,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",8,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",9,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",10,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",11,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",12,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",13,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",14,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",15,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",16,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",17,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",18,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",19,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",20,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",21,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",22,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",23,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",24,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",25,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",26,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",27,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",28,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",29,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",30,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",31,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",32,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",33,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",34,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",35,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",36,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",37,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",38,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",39,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",40,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",41,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",42,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",43,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",44,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",45,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",46,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",47,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",48,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",49,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",50,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",51,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",52,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",53,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",54,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",55,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",56,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",57,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",58,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",59,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",60,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",61,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",62,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",63,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",64,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",65,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",66,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",67,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",68,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",69,TRUE
+2,4,Student,"Places for Butterfiles, Revised Edition",70,TRUE
+3,1,Teacher,"- Nasreen's Secret School, Rain School, More than Anything Else, My Librarian is a Camel, Waiting for the Biblioburro, Thank You Mr. Faulkner",1,TRUE
+3,1,Teacher,"- Nasreen's Secret School, Rain School, More than Anything Else, My Librarian is a Camel, Waiting for the Biblioburro, Thank You Mr. Faulkner",2,TRUE
+3,1,Teacher,"- Nasreen's Secret School, Rain School, More than Anything Else, My Librarian is a Camel, Waiting for the Biblioburro, Thank You Mr. Faulkner",3,TRUE
+3,2,Teacher,"- Lizards, Frods, and Polliwogs, Bullfrogs at Magnolia Circle, Everything you need to knwo about Frogs and Other Slippery Creatures",1,TRUE
+3,2,Teacher,"- Lizards, Frods, and Polliwogs, Bullfrogs at Magnolia Circle, Everything you need to knwo about Frogs and Other Slippery Creatures",2,TRUE
+3,2,Teacher,"- Lizards, Frods, and Polliwogs, Bullfrogs at Magnolia Circle, Everything you need to knwo about Frogs and Other Slippery Creatures",3,TRUE
+3,3,Teacher,- Peter Pan,1,TRUE
+3,3,Teacher,- Peter Pan,2,TRUE
+3,3,Teacher,- Peter Pan,3,TRUE
+3,4,Teacher,"- One Well, Water Dance, The Boy Who Harnessed the Wind",1,TRUE
+3,4,Teacher,"- One Well, Water Dance, The Boy Who Harnessed the Wind",2,TRUE
+3,4,Teacher,"- One Well, Water Dance, The Boy Who Harnessed the Wind",3,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,1,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,2,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,3,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,4,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,5,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,6,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,7,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,8,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,9,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,10,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,11,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,12,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,13,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,14,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,15,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,16,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,17,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,18,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,19,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,20,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,21,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,22,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,23,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,24,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,25,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,26,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,27,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,28,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,29,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,30,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,31,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,32,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,33,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,34,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,35,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,36,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,37,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,38,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,39,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,40,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,41,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,42,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,43,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,44,TRUE
+3,1,Student,Nasreen's Secret School: A True Story from Afghanistan,45,TRUE
+3,1,Student,Rain School,1,TRUE
+3,1,Student,Rain School,2,TRUE
+3,1,Student,Rain School,3,TRUE
+3,1,Student,Rain School,4,TRUE
+3,1,Student,Rain School,5,TRUE
+3,1,Student,Rain School,6,TRUE
+3,1,Student,Rain School,7,TRUE
+3,1,Student,Rain School,8,TRUE
+3,1,Student,Rain School,9,TRUE
+3,1,Student,Rain School,10,TRUE
+3,1,Student,Rain School,11,TRUE
+3,1,Student,Rain School,12,TRUE
+3,1,Student,Rain School,13,TRUE
+3,1,Student,Rain School,14,TRUE
+3,1,Student,Rain School,15,TRUE
+3,1,Student,Rain School,16,TRUE
+3,1,Student,Rain School,17,TRUE
+3,1,Student,Rain School,18,TRUE
+3,1,Student,Rain School,19,TRUE
+3,1,Student,Rain School,20,TRUE
+3,1,Student,Rain School,21,TRUE
+3,1,Student,Rain School,22,TRUE
+3,1,Student,Rain School,23,TRUE
+3,1,Student,Rain School,24,TRUE
+3,1,Student,Rain School,25,TRUE
+3,1,Student,Rain School,26,TRUE
+3,1,Student,Rain School,27,TRUE
+3,1,Student,Rain School,28,TRUE
+3,1,Student,Rain School,29,TRUE
+3,1,Student,Rain School,30,TRUE
+3,1,Student,Rain School,31,TRUE
+3,1,Student,Rain School,32,TRUE
+3,1,Student,Rain School,33,TRUE
+3,1,Student,Rain School,34,TRUE
+3,1,Student,Rain School,35,TRUE
+3,1,Student,Rain School,36,TRUE
+3,1,Student,Rain School,37,TRUE
+3,1,Student,Rain School,38,TRUE
+3,1,Student,Rain School,39,TRUE
+3,1,Student,Rain School,40,TRUE
+3,1,Student,Rain School,41,TRUE
+3,1,Student,Rain School,42,TRUE
+3,1,Student,Rain School,43,TRUE
+3,1,Student,Rain School,44,TRUE
+3,1,Student,Rain School,45,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,1,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,2,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,3,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,4,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,5,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,6,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,7,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,8,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,9,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,10,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,11,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,12,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,13,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,14,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,15,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,16,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,17,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,18,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,19,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,20,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,21,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,22,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,23,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,24,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,25,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,26,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,27,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,28,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,29,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,30,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,31,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,32,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,33,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,34,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,35,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,36,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,37,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,38,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,39,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,40,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,41,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,42,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,43,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,44,TRUE
+3,2,Student,Everything you need to know about Frogs and Other Slippery Creatures,45,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,1,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,2,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,3,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,4,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,5,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,6,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,7,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,8,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,9,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,10,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,11,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,12,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,13,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,14,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,15,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,16,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,17,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,18,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,19,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,20,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,21,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,22,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,23,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,24,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,25,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,26,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,27,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,28,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,29,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,30,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,31,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,32,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,33,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,34,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,35,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,36,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,37,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,38,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,39,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,40,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,41,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,42,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,43,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,44,TRUE
+3,2,Student,Bullfrog at Magnolia Circle: Student,45,TRUE
+3,3,Student,Peter Pan,1,TRUE
+3,3,Student,Peter Pan,2,TRUE
+3,3,Student,Peter Pan,3,TRUE
+3,3,Student,Peter Pan,4,TRUE
+3,3,Student,Peter Pan,5,TRUE
+3,3,Student,Peter Pan,6,TRUE
+3,3,Student,Peter Pan,7,TRUE
+3,3,Student,Peter Pan,8,TRUE
+3,3,Student,Peter Pan,9,TRUE
+3,3,Student,Peter Pan,10,TRUE
+3,3,Student,Peter Pan,11,TRUE
+3,3,Student,Peter Pan,12,TRUE
+3,3,Student,Peter Pan,13,TRUE
+3,3,Student,Peter Pan,14,TRUE
+3,3,Student,Peter Pan,15,TRUE
+3,3,Student,Peter Pan,16,TRUE
+3,3,Student,Peter Pan,17,TRUE
+3,3,Student,Peter Pan,18,TRUE
+3,3,Student,Peter Pan,19,TRUE
+3,3,Student,Peter Pan,20,TRUE
+3,3,Student,Peter Pan,21,TRUE
+3,3,Student,Peter Pan,22,TRUE
+3,3,Student,Peter Pan,23,TRUE
+3,3,Student,Peter Pan,24,TRUE
+3,3,Student,Peter Pan,25,TRUE
+3,3,Student,Peter Pan,26,TRUE
+3,3,Student,Peter Pan,27,TRUE
+3,3,Student,Peter Pan,28,TRUE
+3,3,Student,Peter Pan,29,TRUE
+3,3,Student,Peter Pan,30,TRUE
+3,3,Student,Peter Pan,31,TRUE
+3,3,Student,Peter Pan,32,TRUE
+3,3,Student,Peter Pan,33,TRUE
+3,3,Student,Peter Pan,34,TRUE
+3,3,Student,Peter Pan,35,TRUE
+3,3,Student,Peter Pan,36,TRUE
+3,3,Student,Peter Pan,37,TRUE
+3,3,Student,Peter Pan,38,TRUE
+3,3,Student,Peter Pan,39,TRUE
+3,3,Student,Peter Pan,40,TRUE
+3,3,Student,Peter Pan,41,TRUE
+3,3,Student,Peter Pan,42,TRUE
+3,3,Student,Peter Pan,43,TRUE
+3,3,Student,Peter Pan,44,TRUE
+3,3,Student,Peter Pan,45,TRUE
+3,4,Student,One Well,1,TRUE
+3,4,Student,One Well,2,TRUE
+3,4,Student,One Well,3,TRUE
+3,4,Student,One Well,4,TRUE
+3,4,Student,One Well,5,TRUE
+3,4,Student,One Well,6,TRUE
+3,4,Student,One Well,7,TRUE
+3,4,Student,One Well,8,TRUE
+3,4,Student,One Well,9,TRUE
+3,4,Student,One Well,10,TRUE
+3,4,Student,One Well,11,TRUE
+3,4,Student,One Well,12,TRUE
+3,4,Student,One Well,13,TRUE
+3,4,Student,One Well,14,TRUE
+3,4,Student,One Well,15,TRUE
+3,4,Student,One Well,16,TRUE
+3,4,Student,One Well,17,TRUE
+3,4,Student,One Well,18,TRUE
+3,4,Student,One Well,19,TRUE
+3,4,Student,One Well,20,TRUE
+3,4,Student,One Well,21,TRUE
+3,4,Student,One Well,22,TRUE
+3,4,Student,One Well,23,TRUE
+3,4,Student,One Well,24,TRUE
+3,4,Student,One Well,25,TRUE
+3,4,Student,One Well,26,TRUE
+3,4,Student,One Well,27,TRUE
+3,4,Student,One Well,28,TRUE
+3,4,Student,One Well,29,TRUE
+3,4,Student,One Well,30,TRUE
+3,4,Student,One Well,31,TRUE
+3,4,Student,One Well,32,TRUE
+3,4,Student,One Well,33,TRUE
+3,4,Student,One Well,34,TRUE
+3,4,Student,One Well,35,TRUE
+3,4,Student,One Well,36,TRUE
+3,4,Student,One Well,37,TRUE
+3,4,Student,One Well,38,TRUE
+3,4,Student,One Well,39,TRUE
+3,4,Student,One Well,40,TRUE
+3,4,Student,One Well,41,TRUE
+3,4,Student,One Well,42,TRUE
+3,4,Student,One Well,43,TRUE
+3,4,Student,One Well,44,TRUE
+3,4,Student,One Well,45,TRUE
+4,1,Teacher,"- Love that Dog, River of the Woods",1,TRUE
+4,1,Teacher,"- Love that Dog, River of the Woods",2,TRUE
+4,2,Teacher,"Venom, Can you Survive the Wilderness, Animal Behavior",1,TRUE
+4,2,Teacher,"Venom, Can you Survive the Wilderness, Animal Behavior",2,TRUE
+4,3,Teacher,"Reading Expeditions Fiction, Colonial Voices",1,TRUE
+4,3,Teacher,"Reading Expeditions Fiction, Colonial Voices",2,TRUE
+4,4,Teacher,The Hope Chest,1,TRUE
+4,4,Teacher,The Hope Chest,2,TRUE
+4,1,Student,Love that Dog,1,TRUE
+4,1,Student,Love that Dog,2,TRUE
+4,1,Student,Love that Dog,3,TRUE
+4,1,Student,Love that Dog,4,TRUE
+4,1,Student,Love that Dog,5,TRUE
+4,1,Student,Love that Dog,6,TRUE
+4,1,Student,Love that Dog,7,TRUE
+4,1,Student,Love that Dog,8,TRUE
+4,1,Student,Love that Dog,9,TRUE
+4,1,Student,Love that Dog,10,TRUE
+4,1,Student,Love that Dog,11,TRUE
+4,1,Student,Love that Dog,12,TRUE
+4,1,Student,Love that Dog,13,TRUE
+4,1,Student,Love that Dog,14,TRUE
+4,1,Student,Love that Dog,15,TRUE
+4,1,Student,Love that Dog,16,TRUE
+4,1,Student,Love that Dog,17,TRUE
+4,1,Student,Love that Dog,18,TRUE
+4,1,Student,Love that Dog,19,TRUE
+4,1,Student,Love that Dog,20,TRUE
+4,1,Student,Love that Dog,21,TRUE
+4,1,Student,Love that Dog,22,TRUE
+4,1,Student,Love that Dog,23,TRUE
+4,1,Student,Love that Dog,24,TRUE
+4,1,Student,Love that Dog,25,TRUE
+4,1,Student,Love that Dog,26,TRUE
+4,1,Student,Love that Dog,27,TRUE
+4,1,Student,Love that Dog,28,TRUE
+4,1,Student,Love that Dog,29,TRUE
+4,1,Student,Love that Dog,30,TRUE
+4,2,Student,Animal Behaviors,1,TRUE
+4,2,Student,Animal Behaviors,2,TRUE
+4,2,Student,Animal Behaviors,3,TRUE
+4,2,Student,Animal Behaviors,4,TRUE
+4,2,Student,Animal Behaviors,5,TRUE
+4,2,Student,Animal Behaviors,6,TRUE
+4,2,Student,Animal Behaviors,7,TRUE
+4,2,Student,Animal Behaviors,8,TRUE
+4,2,Student,Animal Behaviors,9,TRUE
+4,2,Student,Animal Behaviors,10,TRUE
+4,2,Student,Animal Behaviors,11,TRUE
+4,2,Student,Animal Behaviors,12,TRUE
+4,2,Student,Animal Behaviors,13,TRUE
+4,2,Student,Animal Behaviors,14,TRUE
+4,2,Student,Animal Behaviors,15,TRUE
+4,2,Student,Animal Behaviors,16,TRUE
+4,2,Student,Animal Behaviors,17,TRUE
+4,2,Student,Animal Behaviors,18,TRUE
+4,2,Student,Animal Behaviors,19,TRUE
+4,2,Student,Animal Behaviors,20,TRUE
+4,2,Student,Animal Behaviors,21,TRUE
+4,2,Student,Animal Behaviors,22,TRUE
+4,2,Student,Animal Behaviors,23,TRUE
+4,2,Student,Animal Behaviors,24,TRUE
+4,2,Student,Animal Behaviors,25,TRUE
+4,2,Student,Animal Behaviors,26,TRUE
+4,2,Student,Animal Behaviors,27,TRUE
+4,2,Student,Animal Behaviors,28,TRUE
+4,2,Student,Animal Behaviors,29,TRUE
+4,2,Student,Animal Behaviors,30,TRUE
+4,3,Student,Divided Loyalties,1,TRUE
+4,3,Student,Divided Loyalties,2,TRUE
+4,3,Student,Divided Loyalties,3,TRUE
+4,3,Student,Divided Loyalties,4,TRUE
+4,3,Student,Divided Loyalties,5,TRUE
+4,3,Student,Divided Loyalties,6,TRUE
+4,3,Student,Divided Loyalties,7,TRUE
+4,3,Student,Divided Loyalties,8,TRUE
+4,3,Student,Divided Loyalties,9,TRUE
+4,3,Student,Divided Loyalties,10,TRUE
+4,3,Student,Divided Loyalties,11,TRUE
+4,3,Student,Divided Loyalties,12,TRUE
+4,3,Student,Divided Loyalties,13,TRUE
+4,3,Student,Divided Loyalties,14,TRUE
+4,3,Student,Divided Loyalties,15,TRUE
+4,3,Student,Divided Loyalties,16,TRUE
+4,3,Student,Divided Loyalties,17,TRUE
+4,3,Student,Divided Loyalties,18,TRUE
+4,3,Student,Divided Loyalties,19,TRUE
+4,3,Student,Divided Loyalties,20,TRUE
+4,3,Student,Divided Loyalties,21,TRUE
+4,3,Student,Divided Loyalties,22,TRUE
+4,3,Student,Divided Loyalties,23,TRUE
+4,3,Student,Divided Loyalties,24,TRUE
+4,3,Student,Divided Loyalties,25,TRUE
+4,3,Student,Divided Loyalties,26,TRUE
+4,3,Student,Divided Loyalties,27,TRUE
+4,3,Student,Divided Loyalties,28,TRUE
+4,3,Student,Divided Loyalties,29,TRUE
+4,3,Student,Divided Loyalties,30,TRUE
+4,3,Student,Divided Loyalties,31,TRUE
+4,3,Student,Divided Loyalties,32,TRUE
+4,3,Student,Divided Loyalties,33,TRUE
+4,3,Student,Divided Loyalties,34,TRUE
+4,3,Student,Divided Loyalties,35,TRUE
+4,3,Student,Divided Loyalties,36,TRUE
+4,3,Student,Divided Loyalties,37,TRUE
+4,4,Student,The Hope Chest,1,TRUE
+4,4,Student,The Hope Chest,2,TRUE
+4,4,Student,The Hope Chest,3,TRUE
+4,4,Student,The Hope Chest,4,TRUE
+4,4,Student,The Hope Chest,5,TRUE
+4,4,Student,The Hope Chest,6,TRUE
+4,4,Student,The Hope Chest,7,TRUE
+4,4,Student,The Hope Chest,8,TRUE
+4,4,Student,The Hope Chest,9,TRUE
+4,4,Student,The Hope Chest,10,TRUE
+4,4,Student,The Hope Chest,11,TRUE
+4,4,Student,The Hope Chest,12,TRUE
+4,4,Student,The Hope Chest,13,TRUE
+4,4,Student,The Hope Chest,14,TRUE
+4,4,Student,The Hope Chest,15,TRUE
+4,4,Student,The Hope Chest,16,TRUE
+4,4,Student,The Hope Chest,17,TRUE
+4,4,Student,The Hope Chest,18,TRUE
+4,4,Student,The Hope Chest,19,TRUE
+4,4,Student,The Hope Chest,20,TRUE
+4,4,Student,The Hope Chest,21,TRUE
+4,4,Student,The Hope Chest,22,TRUE
+4,4,Student,The Hope Chest,23,TRUE
+4,4,Student,The Hope Chest,24,TRUE
+4,4,Student,The Hope Chest,25,TRUE
+4,4,Student,The Hope Chest,26,TRUE
+4,4,Student,The Hope Chest,27,TRUE
+4,4,Student,The Hope Chest,28,TRUE
+4,4,Student,The Hope Chest,29,TRUE
+4,4,Student,The Hope Chest,30,TRUE
+4,4,Student,The Hope Chest,31,TRUE
+4,4,Student,The Hope Chest,32,TRUE
+4,4,Student,The Hope Chest,33,TRUE
+4,4,Student,The Hope Chest,34,TRUE
+4,4,Student,The Hope Chest,35,TRUE
+4,4,Student,The Hope Chest,36,TRUE
+4,4,Student,The Hope Chest,37,TRUE
+4,4,Student,The Hope Chest,38,TRUE
+4,4,Student,The Hope Chest,39,TRUE
+4,4,Student,The Hope Chest,40,TRUE
+4,4,Student,The Hope Chest,41,TRUE
+4,4,Student,The Hope Chest,42,TRUE
+4,4,Student,The Hope Chest,43,TRUE
+4,4,Student,The Hope Chest,44,TRUE
+4,4,Student,The Hope Chest,45,TRUE
+4,4,Student,The Hope Chest,46,TRUE
+4,4,Student,The Hope Chest,47,TRUE
+4,4,Student,The Hope Chest,48,TRUE
+4,4,Student,The Hope Chest,49,TRUE
+4,4,Student,The Hope Chest,50,TRUE
+4,4,Student,The Hope Chest,51,TRUE
+4,4,Student,The Hope Chest,52,TRUE
+4,4,Student,The Hope Chest,53,TRUE
+4,4,Student,The Hope Chest,54,TRUE
+4,4,Student,The Hope Chest,55,TRUE
+4,4,Student,The Hope Chest,56,TRUE
+4,4,Student,The Hope Chest,57,TRUE
+4,4,Student,The Hope Chest,58,TRUE
+4,4,Student,The Hope Chest,59,TRUE
+4,4,Student,The Hope Chest,60,TRUE
+4,4,Student,The Hope Chest,61,TRUE
+5,1,Teacher,"- Life like Mine, Esperanza Rising",1,TRUE
+5,1,Teacher,"- Life like Mine, Esperanza Rising",2,TRUE
+5,2,Teacher,"- Seeds of Change, The Great Kapok Tree, Most Beautiful Roof int the World",1,TRUE
+5,2,Teacher,"- Seeds of Change, The Great Kapok Tree, Most Beautiful Roof int the World",2,TRUE
+5,3,Teacher,Promises to Keep,1,TRUE
+5,3,Teacher,Promises to Keep,2,TRUE
+5,4,Teacher,Eight Days,1,TRUE
+5,4,Teacher,Eight Days,2,TRUE
+5,1,Student,Esperanza Rising,1,TRUE
+5,1,Student,Esperanza Rising,2,TRUE
+5,1,Student,Esperanza Rising,3,TRUE
+5,1,Student,Esperanza Rising,4,TRUE
+5,1,Student,Esperanza Rising,5,TRUE
+5,1,Student,Esperanza Rising,6,TRUE
+5,1,Student,Esperanza Rising,7,TRUE
+5,1,Student,Esperanza Rising,8,TRUE
+5,1,Student,Esperanza Rising,9,TRUE
+5,1,Student,Esperanza Rising,10,TRUE
+5,1,Student,Esperanza Rising,11,TRUE
+5,1,Student,Esperanza Rising,12,TRUE
+5,1,Student,Esperanza Rising,13,TRUE
+5,1,Student,Esperanza Rising,14,TRUE
+5,1,Student,Esperanza Rising,15,TRUE
+5,1,Student,Esperanza Rising,16,TRUE
+5,1,Student,Esperanza Rising,17,TRUE
+5,1,Student,Esperanza Rising,18,TRUE
+5,1,Student,Esperanza Rising,19,TRUE
+5,1,Student,Esperanza Rising,20,TRUE
+5,1,Student,Esperanza Rising,21,TRUE
+5,1,Student,Esperanza Rising,22,TRUE
+5,1,Student,Esperanza Rising,23,TRUE
+5,1,Student,Esperanza Rising,24,TRUE
+5,1,Student,Esperanza Rising,25,TRUE
+5,1,Student,Esperanza Rising,26,TRUE
+5,1,Student,Esperanza Rising,27,TRUE
+5,1,Student,Esperanza Rising,28,TRUE
+5,1,Student,Esperanza Rising,29,TRUE
+5,1,Student,Esperanza Rising,30,TRUE
+5,1,Student,Esperanza Rising,31,TRUE
+5,1,Student,Esperanza Rising,32,TRUE
+5,1,Student,Esperanza Rising,33,TRUE
+5,1,Student,Esperanza Rising,34,TRUE
+5,1,Student,Esperanza Rising,35,TRUE
+5,1,Student,Esperanza Rising,36,TRUE
+5,1,Student,Esperanza Rising,37,TRUE
+5,1,Student,Esperanza Rising,38,TRUE
+5,1,Student,Esperanza Rising,39,TRUE
+5,1,Student,Esperanza Rising,40,TRUE
+5,1,Student,Esperanza Rising,41,TRUE
+5,1,Student,Esperanza Rising,42,TRUE
+5,1,Student,Esperanza Rising,43,TRUE
+5,1,Student,Esperanza Rising,44,TRUE
+5,1,Student,Esperanza Rising,45,TRUE
+5,1,Student,Esperanza Rising,46,TRUE
+5,1,Student,Esperanza Rising,47,TRUE
+5,1,Student,Esperanza Rising,48,TRUE
+5,1,Student,Esperanza Rising,49,TRUE
+5,1,Student,Esperanza Rising,50,TRUE
+5,1,Student,Esperanza Rising,51,TRUE
+5,1,Student,Esperanza Rising,52,TRUE
+5,1,Student,Esperanza Rising,53,TRUE
+5,1,Student,Esperanza Rising,54,TRUE
+5,1,Student,Esperanza Rising,55,TRUE
+5,2,Student,Most Beautiful Roof in the World,1,TRUE
+5,2,Student,Most Beautiful Roof in the World,2,TRUE
+5,2,Student,Most Beautiful Roof in the World,3,TRUE
+5,2,Student,Most Beautiful Roof in the World,4,TRUE
+5,2,Student,Most Beautiful Roof in the World,5,TRUE
+5,2,Student,Most Beautiful Roof in the World,6,TRUE
+5,2,Student,Most Beautiful Roof in the World,7,TRUE
+5,2,Student,Most Beautiful Roof in the World,8,TRUE
+5,2,Student,Most Beautiful Roof in the World,9,TRUE
+5,2,Student,Most Beautiful Roof in the World,10,TRUE
+5,2,Student,Most Beautiful Roof in the World,11,TRUE
+5,2,Student,Most Beautiful Roof in the World,12,TRUE
+5,2,Student,Most Beautiful Roof in the World,13,TRUE
+5,2,Student,Most Beautiful Roof in the World,14,TRUE
+5,2,Student,Most Beautiful Roof in the World,15,TRUE
+5,2,Student,Most Beautiful Roof in the World,16,TRUE
+5,2,Student,Most Beautiful Roof in the World,17,TRUE
+5,2,Student,Most Beautiful Roof in the World,18,TRUE
+5,2,Student,Most Beautiful Roof in the World,19,TRUE
+5,2,Student,Most Beautiful Roof in the World,20,TRUE
+5,2,Student,Most Beautiful Roof in the World,21,TRUE
+5,2,Student,Most Beautiful Roof in the World,22,TRUE
+5,2,Student,Most Beautiful Roof in the World,23,TRUE
+5,2,Student,Most Beautiful Roof in the World,24,TRUE
+5,2,Student,Most Beautiful Roof in the World,25,TRUE
+5,2,Student,Most Beautiful Roof in the World,26,TRUE
+5,2,Student,Most Beautiful Roof in the World,27,TRUE
+5,2,Student,Most Beautiful Roof in the World,28,TRUE
+5,2,Student,Most Beautiful Roof in the World,29,TRUE
+5,2,Student,Most Beautiful Roof in the World,30,TRUE
+5,2,Student,Most Beautiful Roof in the World,31,TRUE
+5,2,Student,Most Beautiful Roof in the World,32,TRUE
+5,2,Student,Most Beautiful Roof in the World,33,TRUE
+5,2,Student,Most Beautiful Roof in the World,34,TRUE
+5,2,Student,Most Beautiful Roof in the World,35,TRUE
+5,2,Student,Most Beautiful Roof in the World,36,TRUE
+5,2,Student,Most Beautiful Roof in the World,37,TRUE
+5,2,Student,Most Beautiful Roof in the World,38,TRUE
+5,2,Student,Most Beautiful Roof in the World,39,TRUE
+5,2,Student,Most Beautiful Roof in the World,40,TRUE
+5,2,Student,Most Beautiful Roof in the World,41,TRUE
+5,2,Student,Most Beautiful Roof in the World,42,TRUE
+5,2,Student,Most Beautiful Roof in the World,43,TRUE
+5,2,Student,Most Beautiful Roof in the World,44,TRUE
+5,2,Student,Most Beautiful Roof in the World,45,TRUE
+5,2,Student,Most Beautiful Roof in the World,46,TRUE
+5,2,Student,Most Beautiful Roof in the World,47,TRUE
+5,2,Student,Most Beautiful Roof in the World,48,TRUE
+5,2,Student,Most Beautiful Roof in the World,49,TRUE
+5,2,Student,Most Beautiful Roof in the World,50,TRUE
+5,2,Student,Most Beautiful Roof in the World,51,TRUE
+5,2,Student,Most Beautiful Roof in the World,52,TRUE
+5,2,Student,Most Beautiful Roof in the World,53,TRUE
+5,2,Student,Most Beautiful Roof in the World,54,TRUE
+5,3,Student,Promises to Keep,1,TRUE
+5,3,Student,Promises to Keep,2,TRUE
+5,3,Student,Promises to Keep,3,TRUE
+5,3,Student,Promises to Keep,4,TRUE
+5,3,Student,Promises to Keep,5,TRUE
+5,3,Student,Promises to Keep,6,TRUE
+5,3,Student,Promises to Keep,7,TRUE
+5,3,Student,Promises to Keep,8,TRUE
+5,3,Student,Promises to Keep,9,TRUE
+5,3,Student,Promises to Keep,10,TRUE
+5,3,Student,Promises to Keep,11,TRUE
+5,3,Student,Promises to Keep,12,TRUE
+5,3,Student,Promises to Keep,13,TRUE
+5,3,Student,Promises to Keep,14,TRUE
+5,3,Student,Promises to Keep,15,TRUE
+5,3,Student,Promises to Keep,16,TRUE
+5,3,Student,Promises to Keep,17,TRUE
+5,3,Student,Promises to Keep,18,TRUE
+5,3,Student,Promises to Keep,19,TRUE
+5,3,Student,Promises to Keep,20,TRUE
+5,3,Student,Promises to Keep,21,TRUE
+5,3,Student,Promises to Keep,22,TRUE
+5,3,Student,Promises to Keep,23,TRUE
+5,3,Student,Promises to Keep,24,TRUE
+5,3,Student,Promises to Keep,25,TRUE
+5,3,Student,Promises to Keep,26,TRUE
+5,3,Student,Promises to Keep,27,TRUE
+5,3,Student,Promises to Keep,28,TRUE
+5,3,Student,Promises to Keep,29,TRUE
+5,3,Student,Promises to Keep,30,TRUE
+5,3,Student,Promises to Keep,31,TRUE
+5,3,Student,Promises to Keep,32,TRUE
+5,3,Student,Promises to Keep,33,TRUE
+5,3,Student,Promises to Keep,34,TRUE
+5,3,Student,Promises to Keep,35,TRUE
+5,3,Student,Promises to Keep,36,TRUE
+5,3,Student,Promises to Keep,37,TRUE
+5,3,Student,Promises to Keep,38,TRUE
+5,3,Student,Promises to Keep,39,TRUE
+5,3,Student,Promises to Keep,40,TRUE
+5,3,Student,Promises to Keep,41,TRUE
+5,3,Student,Promises to Keep,42,TRUE
+5,3,Student,Promises to Keep,43,TRUE
+5,3,Student,Promises to Keep,44,TRUE
+5,3,Student,Promises to Keep,45,TRUE
+5,3,Student,Promises to Keep,46,TRUE
+5,3,Student,Promises to Keep,47,TRUE
+5,3,Student,Promises to Keep,48,TRUE
+5,3,Student,Promises to Keep,49,TRUE
+5,3,Student,Promises to Keep,50,TRUE
+5,3,Student,Promises to Keep,51,TRUE
+5,3,Student,Promises to Keep,52,TRUE
+5,3,Student,Promises to Keep,53,TRUE
+5,3,Student,Promises to Keep,54,TRUE
+5,3,Student,Promises to Keep,55,TRUE
+5,4,Student,Esperanza Rising,1,TRUE
+5,4,Student,Esperanza Rising,2,TRUE
+5,4,Student,Esperanza Rising,3,TRUE
+5,4,Student,Esperanza Rising,4,TRUE
+5,4,Student,Esperanza Rising,5,TRUE
+5,4,Student,Esperanza Rising,6,TRUE
+5,4,Student,Esperanza Rising,7,TRUE
+5,4,Student,Esperanza Rising,8,TRUE
+5,4,Student,Esperanza Rising,9,TRUE
+5,4,Student,Esperanza Rising,10,TRUE
+5,4,Student,Esperanza Rising,11,TRUE
+5,4,Student,Esperanza Rising,12,TRUE
+5,4,Student,Esperanza Rising,13,TRUE
+5,4,Student,Esperanza Rising,14,TRUE
+5,4,Student,Esperanza Rising,15,TRUE
+5,4,Student,Esperanza Rising,16,TRUE
+5,4,Student,Esperanza Rising,17,TRUE
+5,4,Student,Esperanza Rising,18,TRUE
+5,4,Student,Esperanza Rising,19,TRUE
+5,4,Student,Esperanza Rising,20,TRUE
+5,4,Student,Esperanza Rising,21,TRUE
+5,4,Student,Esperanza Rising,22,TRUE
+5,4,Student,Esperanza Rising,23,TRUE
+5,4,Student,Esperanza Rising,24,TRUE
+5,4,Student,Esperanza Rising,25,TRUE
+5,4,Student,Esperanza Rising,26,TRUE
+5,4,Student,Esperanza Rising,27,TRUE
+5,4,Student,Esperanza Rising,28,TRUE
+5,4,Student,Esperanza Rising,29,TRUE
+5,4,Student,Esperanza Rising,30,TRUE
+5,4,Student,Esperanza Rising,31,TRUE
+5,4,Student,Esperanza Rising,32,TRUE
+5,4,Student,Esperanza Rising,33,TRUE
+5,4,Student,Esperanza Rising,34,TRUE
+5,4,Student,Esperanza Rising,35,TRUE
+5,4,Student,Esperanza Rising,36,TRUE
+5,4,Student,Esperanza Rising,37,TRUE
+5,4,Student,Esperanza Rising,38,TRUE
+5,4,Student,Esperanza Rising,39,TRUE
+5,4,Student,Esperanza Rising,40,TRUE
+5,4,Student,Esperanza Rising,41,TRUE
+5,4,Student,Esperanza Rising,42,TRUE
+5,4,Student,Esperanza Rising,43,TRUE
+5,4,Student,Esperanza Rising,44,TRUE
+5,4,Student,Esperanza Rising,45,TRUE
+5,4,Student,Esperanza Rising,46,TRUE
+5,4,Student,Esperanza Rising,47,TRUE
+5,4,Student,Esperanza Rising,48,TRUE
+5,4,Student,Esperanza Rising,49,TRUE
+5,4,Student,Esperanza Rising,50,TRUE
+5,4,Student,Esperanza Rising,51,TRUE
+5,4,Student,Esperanza Rising,52,TRUE
+5,4,Student,Esperanza Rising,53,TRUE
+5,4,Student,Esperanza Rising,54,TRUE
+5,4,Student,Esperanza Rising,55,TRUE
