@@ -2,18 +2,20 @@
 import mysql.connector
 
 conn = mysql.connector.connect(
-    host="localhost",
+    host="localhost",  # Use the MySQL service name from Docker Compose
     user="root",
     password="new_password",
-    database="perrypages"
+    database="perrypages",
 )
 
 cursor = conn.cursor()
 
 
-cursor.execute("""
+cursor.execute(
+    """
    
-""")
+"""
+)
 
 # Commit the changes
 conn.commit()

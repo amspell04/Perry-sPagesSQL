@@ -2,11 +2,12 @@ import mysql.connector
 import pandas as pd
 
 conn = mysql.connector.connect(
-    host="localhost",
+    host="localhost",  # Use the MySQL service name from Docker Compose
     user="root",
     password="new_password",
-    database="perrypages"
+    database="perrypages",
 )
+
 cursor = conn.cursor()
 
 # Insert data into the table
@@ -16,20 +17,22 @@ insert_query = """
 """
 
 # Read the data from CSV
-df = pd.read_csv('book_data.csv')
+df = pd.read_csv("book_data.csv")
 
 # Prepare data for batch insertion
 data = []
 for index, row in df.iterrows():
     # Append each row as a tuple to the data list
-    data.append((
-        row['el_grade'], 
-        row['module_num'], 
-        row['student_teacher'], 
-        row['materials'], 
-        row['copy_num'], 
-        row['available']
-    ))
+    data.append(
+        (
+            row["el_grade"],
+            row["module_num"],
+            row["student_teacher"],
+            row["materials"],
+            row["copy_num"],
+            row["available"],
+        )
+    )
 
 # Perform the batch insert
 cursor.executemany(insert_query, data)

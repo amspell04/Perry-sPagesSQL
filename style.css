@@ -1,0 +1,57 @@
+h1{
+}
+
+button{
+    border-color: #5da4b6;
+    background-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    transition: 500ms ease;
+
+}
+
+
+button:hover{
+    background-color: #5da4b6;
+    color: white;
+}
+
+body{
+    margin: 20px;
+    font-family: Helvetica, sans-serif;
+}
+
+#mainbdy{
+    display: flex;
+
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    text-align: center;
+    border-color: #5da4b6;;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+h3{
+    text-align: left;
+}
+
+#curr{
+    width: 100%;
+}
+
+#toolbar{
+    background-color: rgb(222, 222, 222);
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: space-around;
+}
