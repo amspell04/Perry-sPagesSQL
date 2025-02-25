@@ -8,18 +8,35 @@ conn = mysql.connector.connect(
     database="perrypages",
 )
 
+cursor = conn.cursor()
 
-# cursor = conn.cursor()
+
+select_query = """
+        SELECT el_grade, module_num, student_teacher, materials, copy_num, available
+        FROM books
+        WHERE module_num = %s  # Modify this condition to select the specific row
+    """
+    
+    # Here, '12345' is the module_num you want to query; you can replace it with the desired value
+cursor.execute(select_query, ("2",))  # Make sure to pass parameters as a tuple
+
+    # Fetch the result (single row)
+row = cursor.fetchone()
+
+    # Check if a row was returned
+# if row:
+#         # Print the row values
+#         print(row[0])
+#         print(f"module_num: {row[1]}")
+#         print(f"student_teacher: {row[2]}")
+#         print(f"materials: {row[3]}")
+#         print(f"copy_num: {row[4]}")
+#         print(f"available: {row[5]}")
+# else:
+#         print("No matching row found!")
 
 
-# cursor.execute("""
-#    SELECT el_grade FROM books WHERE el_grade > 2
-# """)
+# Close the cursor and connection
+cursor.close()
+conn.close()
 
-# # Commit the changes
-# conn.commit()
-# print("Executed select el_grade successfully")
-
-# # Close the cursor and connection
-# cursor.close()
-# conn.close()
