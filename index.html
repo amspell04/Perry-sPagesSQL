@@ -47,7 +47,7 @@
           <button class="tool">Enable</button>
           <button class="tool">Enable</button>
         </div>
-        <ul id="data"></ul>
+      
       </div>
       </div>
     </main>
@@ -58,16 +58,28 @@
 </html>
 
 <script>
+document.addEventListener("DOMContentLoaded", async function () {
+  let body = document.querySelector("#curr"); 
+  if (!body) return;
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   data = grabdata()
+  try {
+    let response = await fetch("http://127.0.0.1:8000/getdata"); 
+    let data = await response.json();
+    let div = document.createElement("div");
+    div.className = 'content-box';
 
-//       data.forEach(row => {
-//         let li = document.createElement("li");
-//         li.textContent = `Grade: ${row.el_grade}, Module: ${row.module_num}, Teacher: ${row.student_teacher}`;
-//         dataList.appendChild(li);
-//       });
- 
-// });
+    data.forEach(row => {
+      let rowchild = document.createElement('div');
+      rowchild.className = 'content-row';
+      rowchild.textContent = `Grade: ${row[0]}, Module: ${row[1]}, Teacher: ${row[2]}, Materials: ${row[3]}, Copy Number: ${row[4]}, Available: ${row[5]}`;
+      div.appendChild(rowchild);
+    });
+
+    body.appendChild(div);
+
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+});
 
 </script>
