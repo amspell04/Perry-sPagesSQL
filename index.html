@@ -41,7 +41,7 @@
             <div class="checkin-body">
               <div class="check-btn">
                 <button>-</button>
-                <p>number</p>
+                <p class="checkout-num">number</p>
                 <button>+</button>
               </div>
               <div class="mod-btn">
@@ -58,10 +58,8 @@
             <button>Process</button>
           </div>
         </div>
-        <div class="content"> 
-          <h2>Manage Checkout Requests</h2>
-          <button>Press</button>
-  
+        <div class="content" id="checks"> 
+          <h2>Manage Checkout Requests</h2>  
   
   
         </div>
@@ -111,5 +109,43 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("Error fetching data:", error);
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", async function () {
+  let body = document.querySelector("#checks"); 
+  if (!body) return;
+
+  try {
+    let response = await fetch("http://127.0.0.1:8000/getcheckoutlist"); 
+    let data = await response.json();
+    let div = document.createElement("div");
+    div.className = 'checkout-box';
+
+    data.forEach(row => {
+      let rowchild = document.createElement('div');
+      rowchild.className = 'checkout-row';
+      rowchild.textContent = `Checkout ID: ${row}`;
+      div.appendChild(rowchild);
+    });
+
+    body.appendChild(div);
+
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+});
+
+// const checkoutnum = document.querySelector('.checkout-num');
+// checkoutnum.addEventListener('click', increasecount);
+
+
+
+// async function increasecount(){
+//   let response = await fetch("http://127.0.0.1:8000/increasecount{count}"); 
+//   let count = await response.json();
+
+//   return count
+// }
+
 
 </script>
