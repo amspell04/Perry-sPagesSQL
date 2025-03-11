@@ -19,16 +19,20 @@
           <h2>Check In/Out Materials</h2>
             <h3>Check In</h3>
             <div class="checkin-body">
+              
               <div class="check-btn">
-                <button>-</button>
-                <p>number</p>
-                <button>+</button>
+                <button id="decreasein">-</button>
+                <p id="checkin-num">0</p>
+                <button id="increasein">+</button>
               </div>
-              <div class="mod-btn">
-                <label for="modname">Module name:</label>
-                <input type="text" id="modname" name="modname">
-              </div>
+           
               <div class="class-btn">
+                <label for="modname">Module Number:</label>
+                <input type="text" id="modname" name="modname">
+                <label for="modname">Teacher/Student Set:</label>
+                <input type="text" id="modname" name="modname">
+                <label for="modname">Set Materials:</label>
+                <input type="text" id="modname" name="modname">
                 <label for="classname">Classroom checking out:</label>
                 <input type="text" id="classname" name="classname">
               </div>
@@ -37,12 +41,12 @@
             <div> 
               <button>Process</button>
             </div>
-            <h3>Check Out</h3>
-            <div class="checkin-body">
+            <!-- <h3>Check Out</h3> -->
+            <!-- <div class="checkin-body">
               <div class="check-btn">
-                <button>-</button>
-                <p class="checkout-num">number</p>
-                <button>+</button>
+                <button id="decreaseout">-</button>
+                <p id="checkout-num">0</p>
+                <button id="increaseout">+</button>
               </div>
               <div class="mod-btn">
                 <label for="modname2">Module name:</label>
@@ -53,10 +57,10 @@
                 <input type="text" id="classname2" name="classname">
               </div>
            
-              </div>
-          <div> 
+              </div> -->
+          <!-- <div> 
             <button>Process</button>
-          </div>
+          </div> -->
         </div>
         <div class="content" id="checks"> 
           <h2>Manage Checkout Requests</h2>  
@@ -99,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     data.forEach(row => {
       let rowchild = document.createElement('div');
       rowchild.className = 'content-row';
-      rowchild.textContent = `Grade: ${row[0]}, Module: ${row[1]}, Teacher: ${row[2]}, Materials: ${row[3]}, Copy Number: ${row[4]}, Available: ${row[5]}`;
+      rowchild.textContent = `Grade: ${row[0]}, Module: ${row[1]}, Type: ${row[2]}, Materials: ${row[3]}, Copy Number: ${row[4]}, Available: ${row[5]}`;
       div.appendChild(rowchild);
     });
 
@@ -126,7 +130,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       rowchild.className = 'checkout-row';
       rowchild.textContent = `Checkout ID: ${row}`;
       div.appendChild(rowchild);
+      rowchild.addEventListener('click', () =>{
+      console.log('here will be the implementation to open a popup with the current checkout id and details', row)
+    })
     });
+
+   
 
     body.appendChild(div);
 
@@ -135,17 +144,42 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-// const checkoutnum = document.querySelector('.checkout-num');
-// checkoutnum.addEventListener('click', increasecount);
+let count = 0;
 
+const checkinup = document.querySelector('#increasein');
+checkinup.addEventListener('click', () =>{
+  count += 1;
+  const checkoutnum = document.querySelector('#checkin-num')
+  checkoutnum.textContent = `${count}`;
 
+});
 
-// async function increasecount(){
-//   let response = await fetch("http://127.0.0.1:8000/increasecount{count}"); 
-//   let count = await response.json();
+const checkindown = document.querySelector('#decreasein');
+checkindown.addEventListener('click', () =>{
+  if(count > 0){
+    count -= 1;
+  }
+  const checkoutnum = document.querySelector('#checkin-num')
+  checkoutnum.textContent = `${count}`;
 
-//   return count
-// }
+});
 
+const checkoutup = document.querySelector('#increaseout');
+checkoutup.addEventListener('click', () =>{
+  count += 1;
+  const checkoutnum = document.querySelector('#checkout-num')
+  checkoutnum.textContent = `${count}`;
+
+});
+
+const checkoutdown = document.querySelector('#decreaseout');
+checkoutdown.addEventListener('click', () =>{
+  if(count > 0){
+    count -= 1;
+  }
+  const checkoutnum = document.querySelector('#checkout-num')
+  checkoutnum.textContent = `${count}`;
+
+});
 
 </script>

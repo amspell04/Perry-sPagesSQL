@@ -2,6 +2,7 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+count = 0
 df = pd.read_csv("book_data.csv")
 
 data = df[["el_grade", "module_num", "student_teacher", "materials", "copy_num", "available"]].values.tolist()
@@ -26,8 +27,3 @@ async def get_checkout():
     return checkoutlist
 
 
-
-@app.get("/increasecount{count}")
-async def increasecount(currcount: int):
-    currcount += 1
-    return currcount
