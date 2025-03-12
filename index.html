@@ -90,32 +90,56 @@
 </html>
 
 <script>
-document.addEventListener("DOMContentLoaded", async function () {
-  let body = document.querySelector("#curr"); 
-  if (!body) return;
 
-  try {
-    let response = await fetch("http://127.0.0.1:8000/getdata"); 
-    let data = await response.json();
-    let div = document.createElement("div");
-    div.className = 'content-box';
+  document.addEventListener("DOMContentLoaded", async function () {
+    let body = document.querySelector("#curr");
+    if (!body) return;
+  
+    try {
+      let response = await fetch("http://127.0.0.1:8000/getdata");
+      let data = await response.json();
+      
+      let contentbox = document.createElement('div');
+      contentbox.className = 'content-box';
 
-    data.forEach(row => {
-      let rowchild = document.createElement('div');
-      rowchild.className = 'content-row';
-      rowchild.textContent = `Grade: ${row[0]}, Module: ${row[1]}, Type: ${row[2]}, Materials: ${row[3]}, Copy Number: ${row[4]}, Available: ${row[5]}`;
-      div.appendChild(rowchild);
-    });
+      let table = document.createElement("table");
+      table.style.borderCollapse = "collapse"; 
+  
+      let thead = document.createElement("thead");
+      let headerRow = document.createElement("tr");
+      ["Grade", "Module", "Type", "Materials", "Copy Number", "Available"].forEach(headerText => {
+        let th = document.createElement("th");
+        th.textContent = headerText;
+        th.style.border = "1px solid #5da4b6"; 
+        th.style.padding = "8px"; 
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+  
+      let tbody = document.createElement("tbody");
+      data.forEach(row => {
+        let tr = document.createElement("tr");
+        row.forEach(cellData => {
+          let td = document.createElement("td");
+          td.textContent = cellData;
+          td.style.border = "1px solid #5da4b6"; 
+          td.style.padding = "8px"; 
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+  
+      contentbox.appendChild(table);
+      body.appendChild(contentbox)
+  
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  });
 
-    body.appendChild(div);
-
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-});
-
-
-document.addEventListener("DOMContentLoaded", async function () {
+  document.addEventListener("DOMContentLoaded", async function () {
   let body = document.querySelector("#checks"); 
   if (!body) return;
 
