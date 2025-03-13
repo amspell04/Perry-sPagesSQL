@@ -29,17 +29,17 @@
               <div class="class-btn">
                 <label for="modname">Module Number:</label>
                 <input type="text" id="modname" name="modname">
-                <label for="modname">Teacher/Student Set:</label>
-                <input type="text" id="modname" name="modname">
-                <label for="modname">Set Materials:</label>
-                <input type="text" id="modname" name="modname">
-                <label for="classname">Classroom checking out:</label>
-                <input type="text" id="classname" name="classname">
+                <label for="teachstud">Teacher/Student Set:</label>
+                <input type="text" id="teachstud" name="teachstud">
+                <label for="setname">Set Materials:</label>
+                <input type="text" id="setname" name="setname">
+                <label for="classroom">Classroom checking out:</label>
+                <input type="text" id="classroom" name="classroom">
               </div>
            
               </div>
             <div> 
-              <button>Process</button>
+              <button id="processcheck">Process</button>
             </div>
             <!-- <h3>Check Out</h3> -->
             <!-- <div class="checkin-body">
@@ -89,121 +89,3 @@
   </body>
 </html>
 
-<script>
-
-  document.addEventListener("DOMContentLoaded", async function () {
-    let body = document.querySelector("#curr");
-    if (!body) return;
-  
-    try {
-      let response = await fetch("http://127.0.0.1:8000/getdata");
-      let data = await response.json();
-      
-      let contentbox = document.createElement('div');
-      contentbox.className = 'content-box';
-
-      let table = document.createElement("table");
-      table.style.borderCollapse = "collapse"; 
-  
-      let thead = document.createElement("thead");
-      let headerRow = document.createElement("tr");
-      ["Grade", "Module", "Type", "Materials", "Copy Number", "Available"].forEach(headerText => {
-        let th = document.createElement("th");
-        th.textContent = headerText;
-        th.style.border = "1px solid #5da4b6"; 
-        th.style.padding = "8px"; 
-        headerRow.appendChild(th);
-      });
-      thead.appendChild(headerRow);
-      table.appendChild(thead);
-  
-      let tbody = document.createElement("tbody");
-      data.forEach(row => {
-        let tr = document.createElement("tr");
-        row.forEach(cellData => {
-          let td = document.createElement("td");
-          td.textContent = cellData;
-          td.style.border = "1px solid #5da4b6"; 
-          td.style.padding = "8px"; 
-          tr.appendChild(td);
-        });
-        tbody.appendChild(tr);
-      });
-      table.appendChild(tbody);
-  
-      contentbox.appendChild(table);
-      body.appendChild(contentbox)
-  
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", async function () {
-  let body = document.querySelector("#checks"); 
-  if (!body) return;
-
-  try {
-    let response = await fetch("http://127.0.0.1:8000/getcheckoutlist"); 
-    let data = await response.json();
-    let div = document.createElement("div");
-    div.className = 'checkout-box';
-
-    data.forEach(row => {
-      let rowchild = document.createElement('div');
-      rowchild.className = 'checkout-row';
-      rowchild.textContent = `Checkout ID: ${row}`;
-      div.appendChild(rowchild);
-      rowchild.addEventListener('click', () =>{
-      console.log('here will be the implementation to open a popup with the current checkout id and details', row)
-    })
-    });
-
-   
-
-    body.appendChild(div);
-
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-});
-
-let count = 0;
-
-const checkinup = document.querySelector('#increasein');
-checkinup.addEventListener('click', () =>{
-  count += 1;
-  const checkoutnum = document.querySelector('#checkin-num')
-  checkoutnum.textContent = `${count}`;
-
-});
-
-const checkindown = document.querySelector('#decreasein');
-checkindown.addEventListener('click', () =>{
-  if(count > 0){
-    count -= 1;
-  }
-  const checkoutnum = document.querySelector('#checkin-num')
-  checkoutnum.textContent = `${count}`;
-
-});
-
-const checkoutup = document.querySelector('#increaseout');
-checkoutup.addEventListener('click', () =>{
-  count += 1;
-  const checkoutnum = document.querySelector('#checkout-num')
-  checkoutnum.textContent = `${count}`;
-
-});
-
-const checkoutdown = document.querySelector('#decreaseout');
-checkoutdown.addEventListener('click', () =>{
-  if(count > 0){
-    count -= 1;
-  }
-  const checkoutnum = document.querySelector('#checkout-num')
-  checkoutnum.textContent = `${count}`;
-
-});
-
-</script>

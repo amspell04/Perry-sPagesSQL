@@ -10,6 +10,10 @@ button{
 
 }
 
+.filterbuttons.selected{
+    background-color: #5da4b6;
+}
+
 #checks{
     height: 350px;
 }
