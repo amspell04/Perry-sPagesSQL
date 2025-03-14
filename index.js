@@ -1,4 +1,4 @@
-let checkin = false;
+let checkin = true;
 let checkout = false;
 let count = 0;
 let modulename;
@@ -17,10 +17,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         let contentbox = document.createElement('div');
         contentbox.className = 'content-box';
 
+        let toolbar = document.querySelector(`#toolbar`)
+
         // Module Filter Buttons
         let moduleFilterDiv = document.createElement('div');
         moduleFilterDiv.textContent = 'Filter Modules: ';
-        contentbox.appendChild(moduleFilterDiv);
+        toolbar.appendChild(moduleFilterDiv);
 
         // Get unique module numbers
         const uniqueModules = [...new Set(data.map(row => row[1]))]; 
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async function () {
          // Teacher/Student Filter Buttons
          let tsFilterDiv = document.createElement('div');
          tsFilterDiv.textContent = 'Filter Teacher/Student: ';
-         contentbox.appendChild(tsFilterDiv);
+         toolbar.appendChild(tsFilterDiv);
  
          // Get unique module numbers
          const uniqueVals = [...new Set(data.map(row => row[2]))]; 
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Grade filter buttons
         let gradeFilterDiv = document.createElement('div');
         gradeFilterDiv.textContent = 'Filter Grades: ';
-        contentbox.appendChild(gradeFilterDiv);
+        toolbar.appendChild(gradeFilterDiv);
 
         // Get unique module numbers
         const uniqueGrades = [...new Set(data.map(row => row[0]))]; 
@@ -90,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         let materialsFilterInput = document.createElement('input');
         materialsFilterInput.type = 'text';
         materialsFilterInput.placeholder = 'Filter Materials...';
-        contentbox.appendChild(materialsFilterInput);
+        toolbar.appendChild(materialsFilterInput);
 
         let table = document.createElement("table");
         table.style.borderCollapse = "collapse";
@@ -173,97 +175,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-// document.addEventListener("DOMContentLoaded", async function () {
-//     let body = document.querySelector("#curr");
-//     if (!body) return;
-
-//     try {
-//         let response = await fetch("http://127.0.0.1:8000/getdata");
-//         let data = await response.json();
-
-//         let contentbox = document.createElement('div');
-//         contentbox.className = 'content-box';
-
-//         let filtermod = document.createElement('input');
-//         filtermod.type = 'text';
-//         filtermod.placeholder = 'Filter table by module number...';
-//         contentbox.appendChild(filtermod);
-
-//         // Add filter input
-//         let filterInput = document.createElement('input');
-//         filterInput.type = 'text';
-//         filterInput.placeholder = 'Filter table by material names...';
-//         contentbox.appendChild(filterInput);
-
-//         let table = document.createElement("table");
-//         table.style.borderCollapse = "collapse";
-
-//         let thead = document.createElement("thead");
-//         let headerRow = document.createElement("tr");
-//         ["Grade", "Module", "Type", "Materials", "Copy Number", "Available"].forEach(headerText => {
-//             let th = document.createElement("th");
-//             th.textContent = headerText;
-//             th.style.border = "1px solid #5da4b6";
-//             th.style.padding = "8px";
-//             headerRow.appendChild(th);
-//         });
-//         thead.appendChild(headerRow);
-//         table.appendChild(thead);
-
-//         let tbody = document.createElement("tbody");
-//         table.appendChild(tbody); //Append tbody here first.
-//         contentbox.appendChild(table);
-//         body.appendChild(contentbox);
-
-//         function populateTable(filteredData) {
-//             tbody.innerHTML = ''; // Clear existing rows
-//             filteredData.forEach(row => {
-//                 let tr = document.createElement("tr");
-//                 row.forEach(cellData => {
-//                     let td = document.createElement("td");
-//                     td.textContent = cellData;
-//                     td.style.border = "1px solid #5da4b6";
-//                     td.style.padding = "8px";
-//                     tr.appendChild(td);
-//                 });
-//                 tbody.appendChild(tr);
-//             });
-//         }
-
-//         populateTable(data); // Initial table population
-
-//         filterInput.addEventListener('input', function () {
-//             const filterValue = filterInput.value.toLowerCase();
-//             const filteredData = data.filter(row => {
-//                 return row.some(cellData => {
-//                     if (typeof cellData === 'string' || typeof cellData === 'number') {
-//                         return String(cellData).toLowerCase().includes(filterValue);
-//                     }
-//                     return false;
-//                 });
-//             });
-//             populateTable(filteredData);
-//         });
-
-//         filtermod.addEventListener('input', function () {
-//             const filterValue = filtermod.value.toLowerCase();
-//             const filteredData = data.filter(row => {
-//                 return row.some(cellData => {
-//                     if (typeof cellData === 'string' || typeof cellData === 'number') {
-//                         return String(cellData).toLowerCase().includes(filterValue);
-//                     }
-//                     return false;
-//                 });
-//             });
-//             populateTable(filteredData);
-//         });
-
-//     } catch (error) {
-//         console.error("Error fetching data:", error);
-//     }
-// });
-
-
   document.addEventListener("DOMContentLoaded", async function () {
   let body = document.querySelector("#checks"); 
   if (!body) return;
@@ -312,15 +223,40 @@ checkindown.addEventListener('click', () =>{
 
 });
 
-
-const process = document.querySelector(`#processcheck`)
-process.addEventListener('click', async() =>{
+document.addEventListener("DOMContentLoaded", async function () {
     console.log('check processed')
-    checkin = true
+
+    try {
+        let response = await fetch("http://127.0.0.1:8000/getdata");
+        let data = await response.json();
+
     if(checkin){
-        let mod = document.querySelector(`#modname`)
-        let modvalue = mod.value // should also be a button
-        console.log('module being checked in', modvalue)
+
+        const checkdiv = document.querySelector(`.class-btn`)
+
+        // Module Filter Buttons
+        let modcheck = document.createElement('div');
+        modcheck.textContent = 'Filter Modules: ';
+        checkdiv.appendChild(modcheck);
+
+        // Get unique module numbers
+        const uniqueModules = [...new Set(data.map(row => row[1]))]; 
+
+        const moduleButtons = {}; 
+
+        uniqueModules.forEach(module => {
+            const button = document.createElement('button');
+            button.className = 'filterbuttons'
+            button.textContent = module;
+            button.addEventListener('click', () => {
+                moduleButtons[module] = !moduleButtons[module]; 
+                button.classList.toggle('selected');
+                applyFilters();
+            });
+            modcheck.appendChild(button);
+            moduleButtons[module] = false; 
+        });
+
 
         let ts = document.querySelector(`#teachstud`)
         let tsvalue = ts.value // this should be a button instead
@@ -345,29 +281,10 @@ process.addEventListener('click', async() =>{
         };
         process_checkout(bookToCheckout)
     }
-    if(checkout){
-        let mod = document.querySelector(`#modname`)
-        let modvalue = mod.value // should also be a button
-        console.log('module being checked out', modvalue)
-
-
-        let ts = document.querySelector(`#teachstud`)
-        let tsvalue = ts.value // this should be a button instead
-        console.log('teacher or student set being checked out', tsvalue)
-
-        let set = document.querySelector(`#setname`)
-        let setvalue = set.value // this should be a button instead
-        console.log('set materials being checked out', setvalue)
-
-        let cl = document.querySelector(`#classroom`)
-        let classvalue = cl.value 
-        console.log('classroom checking out', classvalue)
-
-        checkout = !checkout
-      
-
+    } catch (error){
+        console.log('error grabbing data', error)
     }
-
+    
     //resetting variable values
     count = 0;
     resetchecknum(count);
