@@ -9,6 +9,7 @@ let classroom;
 const checkinbuttons = {}; 
 const checkinstatus = document.querySelector('#checkin')
 const checkoutstatus = document.querySelector('#checkout')
+const process = document.querySelector('#processcheck')
 let checkinenabled = false
 let checkoutenabled = false
 
@@ -230,8 +231,11 @@ checkindown.addEventListener('click', () =>{
 });
 
 
+// adding checkout functionality features
+
+
 document.addEventListener("DOMContentLoaded", async function () {
-    console.log('check processed')
+    console.log('adding checkout features')
 
     try {
         let response = await fetch("http://127.0.0.1:8000/getdata");
@@ -303,7 +307,19 @@ document.addEventListener("DOMContentLoaded", async function () {
             materials: "Dot",
             numcheck: 2,
         };
-        process_checkout(bookToCheckout)
+
+        let returnavailability = checkavailability();
+        // ADD FUNCITON HERE!!
+
+        // here adding in a status to show the user - if not able to process 
+
+        if(returnavailability){
+            process_checkout(bookToCheckout)
+            // shows successful processing of checkout
+        }else{
+            // show button and current availability of what is wanting to be checked out
+        }
+
     }
     } catch (error){
         console.log('error grabbing data', error)
