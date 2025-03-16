@@ -1,9 +1,10 @@
 let checkin = true;
 let checkout = false;
 let count = 0;
-let modulename;
-let teachstud;
-let setmaterial;
+let elgrade;
+let modulenum;
+let ts;
+let material;
 let classroom;
 
 const checkinbuttons = {}; 
@@ -245,6 +246,31 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         const checkdiv = document.querySelector(`.class-btn`)
 
+        // EL Grade Filter Buttons
+        let elcheck = document.createElement('div');
+        elcheck.textContent = 'Select EL Grade: ';
+        checkdiv.appendChild(elcheck);
+
+        // // Get unique module numbers
+        const uniqueEL = [...new Set(data.map(row => row[0]))]; 
+
+        const elButtons = {}; 
+
+        uniqueEL.forEach(row => {
+            const button = document.createElement('button');
+            button.className = 'filterbuttons'
+            button.textContent = row;
+            button.addEventListener('click', () => {
+                elButtons[row] = !elButtons[row]; 
+                elgrade = row
+                console.log('current el grade selected to check', elgrade)
+                button.classList.toggle('selected');
+                // applyFilters();
+            });
+            elcheck.appendChild(button);
+            elButtons[row] = false; 
+        });
+
         // Module Filter Buttons
         let modcheck = document.createElement('div');
         modcheck.textContent = 'Select Module: ';
@@ -261,6 +287,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             button.textContent = module;
             button.addEventListener('click', () => {
                 moduleButtons[module] = !moduleButtons[module]; 
+                modulenum = module
+                console.log('current module selected to check',  modulenum)
                 button.classList.toggle('selected');
                 // applyFilters();
             });
@@ -269,12 +297,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
 
 
-        // Module Filter Buttons
+        // Teacher/student Filter Buttons
         let tscheck = document.createElement('div');
         tscheck.textContent = 'Select Teacher or Student: ';
         checkdiv.appendChild(tscheck);
 
-        // Get unique module numbers
+        // Get unique teacher/student values
         const uniqueTS = [...new Set(data.map(row => row[2]))]; 
 
         const tsButtons = {}; 
@@ -286,25 +314,31 @@ document.addEventListener("DOMContentLoaded", async function () {
             button.addEventListener('click', () => {
                 tsButtons[row] = !tsButtons[row]; 
                 button.classList.toggle('selected');
-             
+                ts = row
+                console.log('current ts selected to check', ts)
                 // applyFilters();
             });
             tscheck.appendChild(button);
             tsButtons[row] = false; 
         });
       
+        let set = document.querySelector(`#set`)
+        material = set.value 
+        console.log('set materials checking', material)
+        
 
         let cl = document.querySelector(`#classroom`)
-        let classvalue = cl.value 
-        console.log('classroom checking in', classvalue)
+        classroom = cl.value 
+        console.log('classroom checking', classroom)
 
         checkin = !checkin
 
         const bookToCheckout = {
-            el_grade: "1",
-            module_num: "1",
-            student_teacher: "Student",
-            materials: "Dot",
+            el_grade: elgrade,
+            mod_num: modulenum,
+            t_s: ts,
+            set_materials: material,
+            class_name: classroom,
             numcheck: 2,
         };
 
@@ -341,6 +375,8 @@ function resetchecknum(count){
     const checkoutnum = document.querySelector('#checkin-num')
     checkoutnum.textContent = `${count}`; 
 }
+
+// button styling for checkin box
 
 checkinstatus.addEventListener('click', ()=>{
     checkinenabled = !checkinenabled
