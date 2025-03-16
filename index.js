@@ -6,6 +6,12 @@ let teachstud;
 let setmaterial;
 let classroom;
 
+const checkinbuttons = {}; 
+const checkinstatus = document.querySelector('#checkin')
+const checkoutstatus = document.querySelector('#checkout')
+let checkinenabled = false
+let checkoutenabled = false
+
 document.addEventListener("DOMContentLoaded", async function () {
     let body = document.querySelector("#curr");
     if (!body) return;
@@ -223,6 +229,7 @@ checkindown.addEventListener('click', () =>{
 
 });
 
+
 document.addEventListener("DOMContentLoaded", async function () {
     console.log('check processed')
 
@@ -236,7 +243,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         // Module Filter Buttons
         let modcheck = document.createElement('div');
-        modcheck.textContent = 'Filter Modules: ';
+        modcheck.textContent = 'Select Module: ';
         checkdiv.appendChild(modcheck);
 
         // Get unique module numbers
@@ -251,20 +258,37 @@ document.addEventListener("DOMContentLoaded", async function () {
             button.addEventListener('click', () => {
                 moduleButtons[module] = !moduleButtons[module]; 
                 button.classList.toggle('selected');
-                applyFilters();
+                // applyFilters();
             });
             modcheck.appendChild(button);
             moduleButtons[module] = false; 
         });
 
 
-        let ts = document.querySelector(`#teachstud`)
-        let tsvalue = ts.value // this should be a button instead
-        console.log('teacher or student set being checked in', tsvalue)
+        // Module Filter Buttons
+        let tscheck = document.createElement('div');
+        tscheck.textContent = 'Select Teacher or Student: ';
+        checkdiv.appendChild(tscheck);
 
-        let set = document.querySelector(`#setname`)
-        let setvalue = set.value // this should be a button instead
-        console.log('set materials being checked in', setvalue)
+        // Get unique module numbers
+        const uniqueTS = [...new Set(data.map(row => row[2]))]; 
+
+        const tsButtons = {}; 
+
+        uniqueTS.forEach(row => {
+            const button = document.createElement('button');
+            button.className = 'filterbuttons'
+            button.textContent = row;
+            button.addEventListener('click', () => {
+                tsButtons[row] = !tsButtons[row]; 
+                button.classList.toggle('selected');
+             
+                // applyFilters();
+            });
+            tscheck.appendChild(button);
+            tsButtons[row] = false; 
+        });
+      
 
         let cl = document.querySelector(`#classroom`)
         let classvalue = cl.value 
@@ -301,3 +325,30 @@ function resetchecknum(count){
     const checkoutnum = document.querySelector('#checkin-num')
     checkoutnum.textContent = `${count}`; 
 }
+
+checkinstatus.addEventListener('click', ()=>{
+    checkinenabled = !checkinenabled
+    if(checkinenabled){
+        checkoutstatus.classList.add('disabled')
+        checkinstatus.classList.add('enabled')
+    }else{
+        checkinstatus.classList.remove('enabled')
+        checkoutstatus.classList.remove("disabled")
+    }
+});
+
+checkoutstatus.addEventListener('click', ()=>{
+    console.log(checkoutenabled, 'current checkout bool'
+    )
+    checkoutenabled = !checkoutenabled
+    if(checkoutenabled){
+        checkinstatus.classList.add("disabled")
+        checkoutstatus.classList.add('enabled')
+    }else{
+        checkoutstatus.classList.remove('enabled')
+        checkinstatus.classList.remove('disabled')
+    }
+});
+
+
+

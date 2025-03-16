@@ -6,8 +6,20 @@ button{
     background-color: #FFFF;
     border-style: solid;
     border-radius: 20px;
-    transition: 500ms ease;
+    transition: 200ms ease;
 
+}
+
+button.disabled {
+    background-color: #ccc;
+    border: 1px solid #999;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+button.enabled{
+    background-color: #5da4b6;
 }
 
 .filterbuttons.selected{
@@ -141,4 +153,8 @@ h3{
     padding: 10px;
     font-size: 10px;
     margin: 5px;
+}
+
+.enabled{
+    background-color: #5da4b6;
 }
