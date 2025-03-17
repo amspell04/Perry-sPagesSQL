@@ -1,4 +1,6 @@
-h1{
+input{
+    padding: 5px;
+    margin-top: 10px;
 }
 
 button{
@@ -9,6 +11,18 @@ button{
     transition: 200ms ease;
 
 }
+
+#process-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#processcheck{
+    padding: 10px;
+}
+
 
 button.disabled {
     background-color: #ccc;
@@ -53,7 +67,7 @@ body{
 }
 
 .content{
-    text-align: center;
+    text-align: left;
     background-color: #FFFF;
     border-color: #5da4b6;;
     border-width: 20px;
@@ -101,15 +115,15 @@ h3{
 .checkin-body{
     display: flex;
     flex-direction: column;
-    margin: 10px;
 }
 
 
 .check-btn{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .check-btn button{
@@ -157,4 +171,17 @@ h3{
 
 .enabled{
     background-color: #5da4b6;
+}
+
+.suggestions{
+    border: rgba(92, 92, 92, 0.752);
+    border-style: solid;
+    border-width: .5px .5px 0 0;
+    list-style:circle;
+    padding: 5px;
+}
+
+#suggestions{
+    text-align: center;
+    background-color: #95aeb4b3;
 }

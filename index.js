@@ -6,6 +6,7 @@ let modulenum;
 let ts;
 let material;
 let classroom;
+let numcopies;
 
 const checkinbuttons = {}; 
 const checkinstatus = document.querySelector('#checkin')
@@ -193,17 +194,44 @@ document.addEventListener("DOMContentLoaded", async function () {
     let div = document.createElement("div");
     div.className = 'checkout-box';
 
-    data.forEach(row => {
-      let rowchild = document.createElement('div');
-      rowchild.className = 'checkout-row';
-      rowchild.textContent = `Checkout ID: ${row}`;
-      div.appendChild(rowchild);
-      rowchild.addEventListener('click', () =>{
-      console.log('here will be the implementation to open a popup with the current checkout id and details', row)
-    })
-    });
+    let table = document.createElement("table");
+    table.style.borderCollapse = "collapse";
 
+    let thead = document.createElement("thead");
+    let headerRow = document.createElement("tr");
+    ["Checkout ID", "Grade", "Module", "Type", "Materials", "Number of Copies", "Classroom"].forEach(headerText => {
+        let th = document.createElement("th");
+        th.textContent = headerText;
+        th.style.border = "1px solid #5da4b6";
+        th.style.padding = "8px";
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    let tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+    div.appendChild(table);
+    body.appendChild(div);
+
+    function populateTable(filteredData) {
+        tbody.innerHTML = '';
+        filteredData.forEach(row => {
+            let tr = document.createElement("tr");
+            row.forEach(cellData => {
+                let td = document.createElement("td");
+                td.textContent = cellData;
+                td.style.border = "1px solid #5da4b6";
+                td.style.padding = "8px";
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+        });
+    }
    
+    console.log(data)
+    populateTable(data)
+
 
     body.appendChild(div);
 
@@ -232,175 +260,156 @@ checkindown.addEventListener('click', () =>{
 });
 
 
-// adding checkout functionality features
-
+// CHECKOUT TAB
 
 document.addEventListener("DOMContentLoaded", async function () {
-    console.log('adding checkout features')
+    console.log('adding checkout features');
 
     try {
         let response = await fetch("http://127.0.0.1:8000/getdata");
         let data = await response.json();
 
-    if(checkin){
+        const checkdiv = document.querySelector(`.class-btn`);
+        const process = document.querySelector('#processcheck');
 
-        const checkdiv = document.querySelector(`.class-btn`)
+        let set = document.querySelector(`#set`);
+        let cl = document.querySelector(`#classroom`);
 
-        // EL Grade Filter Buttons
-        let elcheck = document.createElement('div');
-        elcheck.textContent = 'Select EL Grade: ';
-        checkdiv.appendChild(elcheck);
+        const searchInput = document.getElementById('set');
+        const suggestionsList = document.getElementById('suggestions');
 
-        // // Get unique module numbers
-        const uniqueEL = [...new Set(data.map(row => row[0]))]; 
+        function populateSuggestions(inputValue) {
+            suggestionsList.innerHTML = '';
 
-        const elButtons = {}; 
+            if (inputValue.length === 0) {
+                return;
+            }
 
-        uniqueEL.forEach(row => {
-            const button = document.createElement('button');
-            button.className = 'filterbuttons'
-            button.textContent = row;
-            button.addEventListener('click', () => {
-                elButtons[row] = !elButtons[row]; 
-                elgrade = row
-                console.log('current el grade selected to check', elgrade)
-                button.classList.toggle('selected');
-                // applyFilters();
+            const uniqueMaterials = new Set();
+
+            const filteredTitles = data.filter(row => {
+                const materials = String(row[3]);
+                if (materials.includes(inputValue)) {
+                    if (!uniqueMaterials.has(materials)) {
+                        uniqueMaterials.add(materials);
+                        return true;
+                    }
+                }
+                return false;
             });
-            elcheck.appendChild(button);
-            elButtons[row] = false; 
-        });
 
-        // Module Filter Buttons
-        let modcheck = document.createElement('div');
-        modcheck.textContent = 'Select Module: ';
-        checkdiv.appendChild(modcheck);
-
-        // Get unique module numbers
-        const uniqueModules = [...new Set(data.map(row => row[1]))]; 
-
-        const moduleButtons = {}; 
-
-        uniqueModules.forEach(module => {
-            const button = document.createElement('button');
-            button.className = 'filterbuttons'
-            button.textContent = module;
-            button.addEventListener('click', () => {
-                moduleButtons[module] = !moduleButtons[module]; 
-                modulenum = module
-                console.log('current module selected to check',  modulenum)
-                button.classList.toggle('selected');
-                // applyFilters();
+            uniqueMaterials.forEach(material => {
+                const listItem = document.createElement('li');
+                listItem.className = 'suggestions';
+                listItem.textContent = material;
+                listItem.addEventListener('click', () => {
+                    searchInput.value = material;
+                    suggestionsList.innerHTML = '';
+                });
+                suggestionsList.appendChild(listItem);
             });
-            modcheck.appendChild(button);
-            moduleButtons[module] = false; 
-        });
-
-
-        // Teacher/student Filter Buttons
-        let tscheck = document.createElement('div');
-        tscheck.textContent = 'Select Teacher or Student: ';
-        checkdiv.appendChild(tscheck);
-
-        // Get unique teacher/student values
-        const uniqueTS = [...new Set(data.map(row => row[2]))]; 
-
-        const tsButtons = {}; 
-
-        uniqueTS.forEach(row => {
-            const button = document.createElement('button');
-            button.className = 'filterbuttons'
-            button.textContent = row;
-            button.addEventListener('click', () => {
-                tsButtons[row] = !tsButtons[row]; 
-                button.classList.toggle('selected');
-                ts = row
-                console.log('current ts selected to check', ts)
-                // applyFilters();
-            });
-            tscheck.appendChild(button);
-            tsButtons[row] = false; 
-        });
-      
-        let set = document.querySelector(`#set`)
-        material = set.value 
-        console.log('set materials checking', material)
-        
-
-        let cl = document.querySelector(`#classroom`)
-        classroom = cl.value 
-        console.log('classroom checking', classroom)
-
-        checkin = !checkin
-
-        const bookToCheckout = {
-            el_grade: elgrade,
-            mod_num: modulenum,
-            t_s: ts,
-            set_materials: material,
-            class_name: classroom,
-            numcheck: 2,
-        };
-
-        let returnavailability = checkavailability();
-        // ADD FUNCITON HERE!!
-
-        // here adding in a status to show the user - if not able to process 
-
-        if(returnavailability){
-            process_checkout(bookToCheckout)
-            // shows successful processing of checkout
-        }else{
-            // show button and current availability of what is wanting to be checked out
         }
 
+        searchInput.addEventListener('input', () => {
+            populateSuggestions(searchInput.value);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (event.target !== searchInput && event.target !== suggestionsList) {
+                suggestionsList.innerHTML = '';
+            }
+        });
+
+        process.addEventListener('click', async () => {
+            const material = set.value;
+            const classroom = cl.value;
+            const numCheck = count;
+
+            if (!material || !classroom || numCheck <= 0) {
+                alert("Please fill in all checkout details.");
+                return;
+            }
+
+            // Find matching data rows
+            const matchingItems = data.filter(row => row[3] === material);
+
+            if (matchingItems.length === 0) {
+                alert("Material not found.");
+                return;
+            }
+
+            const totalAvailable = matchingItems.reduce((sum, item) => sum + item[5], 0);
+
+            if (totalAvailable >= numCheck) {
+                // Process checkout
+                const firstMatchingItem = matchingItems[0];
+                const elGrade = firstMatchingItem[0];
+                const moduleNum = firstMatchingItem[1];
+                const ts = firstMatchingItem[2];
+
+                try {
+                    const checkoutResponse = await fetch("http://127.0.0.1:8000/addcheckout", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            el_grade: elGrade,
+                            module_num: moduleNum,
+                            student_teacher: ts,
+                            materials: material,
+                            num_checked: numCheck,
+                            classroom: classroom,
+                        }),
+                    });
+
+                    if (checkoutResponse.ok) {
+                        alert("Checkout processed successfully!");
+                        // Refresh checkout table
+                        const checkoutListResponse = await fetch("http://127.0.0.1:8000/getcheckoutlist");
+                        const checkoutListData = await checkoutListResponse.json();
+                        populateCheckoutTable(checkoutListData);
+                        // Refresh main table
+                        // const updatedDataResponse = await fetch("http://127.0.0.1:8000/getdata");
+                        // const updatedData = await updatedDataResponse.json();
+                        // data = updatedData;
+                    } else {
+                        alert("Failed to process checkout.");
+                    }
+                } catch (error) {
+                    console.error("Error processing checkout:", error);
+                    alert("An error occurred during checkout.");
+                }
+            } else {
+                alert(`Insufficient resources. Available: ${totalAvailable}, Requested: ${numCheck}`);
+            }
+        });
+
+    } catch (error) {
+        console.log('error grabbing data', error);
     }
-    } catch (error){
-        console.log('error grabbing data', error)
-    }
-    
-    //resetting variable values
+
     count = 0;
     resetchecknum(count);
-    modulename  = '';
-    teachstud = '';
-    setmaterial = '';
-    classroom = ''; 
+});
 
-})
-
-
-
-function resetchecknum(count){
-    const checkoutnum = document.querySelector('#checkin-num')
-    checkoutnum.textContent = `${count}`; 
+function resetchecknum(count) {
+    const checkoutnum = document.querySelector('#checkin-num');
+    checkoutnum.textContent = `${count}`;
 }
 
-// button styling for checkin box
-
-checkinstatus.addEventListener('click', ()=>{
-    checkinenabled = !checkinenabled
-    if(checkinenabled){
-        checkoutstatus.classList.add('disabled')
-        checkinstatus.classList.add('enabled')
-    }else{
-        checkinstatus.classList.remove('enabled')
-        checkoutstatus.classList.remove("disabled")
-    }
-});
-
-checkoutstatus.addEventListener('click', ()=>{
-    console.log(checkoutenabled, 'current checkout bool'
-    )
-    checkoutenabled = !checkoutenabled
-    if(checkoutenabled){
-        checkinstatus.classList.add("disabled")
-        checkoutstatus.classList.add('enabled')
-    }else{
-        checkoutstatus.classList.remove('enabled')
-        checkinstatus.classList.remove('disabled')
-    }
-});
-
-
-
+function populateCheckoutTable(filteredData) {
+    const tbody = document.querySelector("#checks table tbody");
+    tbody.innerHTML = '';
+    filteredData.forEach(row => {
+        let tr = document.createElement("tr");
+        row.forEach(cellData => {
+            let td = document.createElement("td");
+            td.textContent = cellData;
+            td.style.border = "1px solid #5da4b6";
+            td.style.padding = "8px";
+            tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+    });
+}
