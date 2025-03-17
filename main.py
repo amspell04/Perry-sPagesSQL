@@ -46,6 +46,7 @@ async def add_checkout(checkout_data: dict = Body(...)):
     
     material = checkout_data["materials"]
     num_checked = checkout_data["num_checked"]
+    copynumbertocheck = num_checked
 
     matching_rows = df[df["materials"] == material]
     if matching_rows.empty:
@@ -57,11 +58,15 @@ async def add_checkout(checkout_data: dict = Body(...)):
         raise HTTPException(status_code=400, detail="Insufficient resources")
 
     # Update available count in book_data.csv
-    rows_to_update = matching_rows.head(num_checked)
-    for index, row in rows_to_update.iterrows():
-        if row["available"] >= 1:
-            df.loc[index, "available"] -= 1
-        # else:
+
+    for index, row in matching_rows.iterrows():
+        if copynumbertocheck > 0:
+            if row["available"] >= 1:
+                df.loc[index, "available"] -= 1
+                copynumbertocheck -= 1
+        else:
+            break
+            # else:
         #     raise HTTPException(status_code=400, detail="insufficient resources")
 
         # WORK HERE BECAUSE IF FIRST ARE CHECKED OUT IN DOT DOES NOT REACH OTHER RESOURCES
@@ -85,3 +90,4 @@ async def add_checkout(checkout_data: dict = Body(...)):
     write_csv(cf, "check_data.csv")
 
     return {"message": "Checkout added successfully", "checkout_id": checkout_id}
+

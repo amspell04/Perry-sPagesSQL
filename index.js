@@ -7,6 +7,7 @@ let ts;
 let material;
 let classroom;
 let numcopies;
+let data;
 
 const checkinbuttons = {}; 
 const checkinstatus = document.querySelector('#checkin')
@@ -15,13 +16,22 @@ const process = document.querySelector('#processcheck')
 let checkinenabled = false
 let checkoutenabled = false
 
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", async() =>{
+    const dataresponse = await getdatalist();
+    console.log(dataresponse);
+    const checkresponse = await getcheckoutlist();
+    console.log(checkresponse);
+
+});
+
+
+async function getdatalist() {
     let body = document.querySelector("#curr");
     if (!body) return;
 
     try {
         let response = await fetch("http://127.0.0.1:8000/getdata");
-        let data = await response.json();
+        data = await response.json();
 
         let contentbox = document.createElement('div');
         contentbox.className = 'content-box';
@@ -182,15 +192,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     } catch (error) {
         console.error("Error fetching data:", error);
     }
-});
+}
 
-  document.addEventListener("DOMContentLoaded", async function () {
+async function getcheckoutlist() {
   let body = document.querySelector("#checks"); 
   if (!body) return;
 
   try {
     let response = await fetch("http://127.0.0.1:8000/getcheckoutlist"); 
-    let data = await response.json();
+    let checkoutdata = await response.json();
     let div = document.createElement("div");
     div.className = 'checkout-box';
 
@@ -199,7 +209,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     let thead = document.createElement("thead");
     let headerRow = document.createElement("tr");
-    ["Checkout ID", "Grade", "Module", "Type", "Materials", "Number of Copies", "Classroom"].forEach(headerText => {
+    ["Checkout ID", "Grade", "Module", "Type", "Materials", "Number of Copies", "Classroom",  "Check In"].forEach(headerText => {
         let th = document.createElement("th");
         th.textContent = headerText;
         th.style.border = "1px solid #5da4b6";
@@ -214,31 +224,51 @@ document.addEventListener("DOMContentLoaded", async function () {
     div.appendChild(table);
     body.appendChild(div);
 
-    function populateTable(filteredData) {
-        tbody.innerHTML = '';
-        filteredData.forEach(row => {
-            let tr = document.createElement("tr");
-            row.forEach(cellData => {
-                let td = document.createElement("td");
-                td.textContent = cellData;
-                td.style.border = "1px solid #5da4b6";
-                td.style.padding = "8px";
-                tr.appendChild(td);
-            });
-            tbody.appendChild(tr);
-        });
-    }
-   
-    console.log(data)
-    populateTable(data)
 
+    console.log(checkoutdata)
+    populateCheckoutTable(checkoutdata)
 
     body.appendChild(div);
 
   } catch (error) {
     console.error("Error fetching data:", error);
   }
-});
+}
+
+
+function populateCheckoutTable(filteredData) {
+    const tbody = document.querySelector("#checks table tbody");
+    tbody.innerHTML = '';
+    filteredData.forEach(row => {
+        let tr = document.createElement("tr");
+        row.forEach(cellData => {
+            let td = document.createElement("td");
+            td.textContent = cellData;
+            td.style.border = "1px solid #5da4b6";
+            td.style.padding = "8px";
+            tr.appendChild(td);
+        });
+
+        let buttonCell = document.createElement("td");
+        buttonCell.style.border = "1px solid #5da4b6";
+        buttonCell.style.padding = "8px";
+        console.log(' adding button')
+        let btn = document.createElement("button");
+        btn.textContent = 'Check In';
+        btn.style.border = "1px solid #5da4b6";
+        btn.style.padding = "8px";
+
+        btn.addEventListener("click", function() {
+            console.log("Check In button clicked for row:", row);
+            // Add your check-in logic here
+        });
+
+        buttonCell.appendChild(btn);
+        tr.appendChild(buttonCell);
+
+        tbody.appendChild(tr);
+    });
+}
 
 
 const checkinup = document.querySelector('#increasein');
@@ -267,9 +297,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     try {
         let response = await fetch("http://127.0.0.1:8000/getdata");
-        let data = await response.json();
+        data = await response.json();
 
-        const checkdiv = document.querySelector(`.class-btn`);
         const process = document.querySelector('#processcheck');
 
         let set = document.querySelector(`#set`);
@@ -365,14 +394,19 @@ document.addEventListener("DOMContentLoaded", async function () {
 
                     if (checkoutResponse.ok) {
                         alert("Checkout processed successfully!");
+                
                         // Refresh checkout table
-                        const checkoutListResponse = await fetch("http://127.0.0.1:8000/getcheckoutlist");
-                        const checkoutListData = await checkoutListResponse.json();
-                        populateCheckoutTable(checkoutListData);
+                        const checkoutListResponse = await getcheckoutlist();
+                        console.log(checkoutListResponse)
+                
                         // Refresh main table
-                        // const updatedDataResponse = await fetch("http://127.0.0.1:8000/getdata");
-                        // const updatedData = await updatedDataResponse.json();
-                        // data = updatedData;
+                        const updatedDataResponse = await getdatalist();
+                        console.log(updatedDataResponse)
+                
+                        // // Update the main table data and repopulate
+                        // data = updatedData; // Update the global data variable
+                        // applyFilters(); // Reapply filters to update the main table
+                
                     } else {
                         alert("Failed to process checkout.");
                     }
@@ -398,18 +432,3 @@ function resetchecknum(count) {
     checkoutnum.textContent = `${count}`;
 }
 
-function populateCheckoutTable(filteredData) {
-    const tbody = document.querySelector("#checks table tbody");
-    tbody.innerHTML = '';
-    filteredData.forEach(row => {
-        let tr = document.createElement("tr");
-        row.forEach(cellData => {
-            let td = document.createElement("td");
-            td.textContent = cellData;
-            td.style.border = "1px solid #5da4b6";
-            td.style.padding = "8px";
-            tr.appendChild(td);
-        });
-        tbody.appendChild(tr);
-    });
-}

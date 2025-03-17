@@ -1,32 +1,32 @@
 el_grade,module_num,student_teacher,materials,copy_num,available
 2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",1,0
-2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",2,1
-2,2,Teacher,"Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",1,0
-2,2,Teacher,"Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",2,0
-2,3,Teacher,"Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",1,0
-2,3,Teacher,"Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",2,0
-2,4,Teacher,"Hey, Little Ant, Little Hummingbird, Lizard and the Sun, Ant and the Grasshopper, Place for Bats, Place for Butterflies, Teacher Manuals",1,0
+2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",2,0
+2,2,Teacher,"Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",1,1
+2,2,Teacher,"Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",2,1
+2,3,Teacher,"Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",1,1
+2,3,Teacher,"Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",2,1
+2,4,Teacher,"Hey, Little Ant, Little Hummingbird, Lizard and the Sun, Ant and the Grasshopper, Place for Bats, Place for Butterflies, Teacher Manuals",1,1
 2,4,Teacher,"Hey, Little Ant, Little Hummingbird, Lizard and the Sun, Ant and the Grasshopper, Place for Bats, Place for Butterflies, Teacher Manuals",2,1
 2,1,Student,Dot,1,0
 2,1,Student,Dot,2,0
-2,1,Student,Dot,3,1
-2,1,Student,Dot,4,1
-2,1,Student,Dot,5,1
-2,1,Student,Dot,6,1
-2,1,Student,Dot,7,1
-2,1,Student,Dot,8,1
-2,1,Student,Dot,9,1
-2,1,Student,Dot,10,1
-2,1,Student,Dot,11,1
-2,1,Student,Dot,12,1
-2,1,Student,Dot,13,1
-2,1,Student,Dot,14,1
-2,1,Student,Off to Class,1,1
-2,1,Student,Off to Class,2,1
-2,1,Student,Off to Class,3,1
-2,1,Student,Off to Class,4,1
-2,1,Student,Off to Class,5,1
-2,1,Student,Off to Class,6,1
+2,1,Student,Dot,3,0
+2,1,Student,Dot,4,0
+2,1,Student,Dot,5,0
+2,1,Student,Dot,6,0
+2,1,Student,Dot,7,0
+2,1,Student,Dot,8,0
+2,1,Student,Dot,9,0
+2,1,Student,Dot,10,0
+2,1,Student,Dot,11,0
+2,1,Student,Dot,12,0
+2,1,Student,Dot,13,0
+2,1,Student,Dot,14,0
+2,1,Student,Off to Class,1,0
+2,1,Student,Off to Class,2,0
+2,1,Student,Off to Class,3,0
+2,1,Student,Off to Class,4,0
+2,1,Student,Off to Class,5,0
+2,1,Student,Off to Class,6,0
 2,1,Student,Off to Class,7,1
 2,1,Student,Off to Class,8,1
 2,1,Student,Off to Class,9,1
@@ -41,8 +41,8 @@ el_grade,module_num,student_teacher,materials,copy_num,available
 2,1,Student,The Invisible Boy,8,1
 2,1,Student,The Invisible Boy,9,1
 2,1,Student,The Invisible Boy,10,1
-2,2,Student,The Dog That Dug For Dinos,1,0
-2,2,Student,The Dog That Dug For Dinos,2,0
+2,2,Student,The Dog That Dug For Dinos,1,1
+2,2,Student,The Dog That Dug For Dinos,2,1
 2,2,Student,The Dog That Dug For Dinos,3,1
 2,2,Student,The Dog That Dug For Dinos,4,1
 2,2,Student,The Dog That Dug For Dinos,5,1
@@ -183,8 +183,8 @@ el_grade,module_num,student_teacher,materials,copy_num,available
 2,3,Student,National Geographic Readers: Seed to Plant,68,1
 2,3,Student,National Geographic Readers: Seed to Plant,69,1
 2,3,Student,National Geographic Readers: Seed to Plant,70,1
-2,3,Student,From Seed to Plant,1,0
-2,3,Student,From Seed to Plant,2,0
+2,3,Student,From Seed to Plant,1,1
+2,3,Student,From Seed to Plant,2,1
 2,3,Student,From Seed to Plant,3,1
 2,3,Student,From Seed to Plant,4,1
 2,3,Student,From Seed to Plant,5,1
@@ -267,8 +267,8 @@ el_grade,module_num,student_teacher,materials,copy_num,available
 2,3,Student,What is Pollination?,40,1
 2,3,Student,What is Pollination?,41,1
 2,3,Student,What is Pollination?,42,1
-2,4,Student,"Hey, Little Ant",1,0
-2,4,Student,"Hey, Little Ant",2,0
+2,4,Student,"Hey, Little Ant",1,1
+2,4,Student,"Hey, Little Ant",2,1
 2,4,Student,"Hey, Little Ant",3,1
 2,4,Student,"Hey, Little Ant",4,1
 2,4,Student,"Hey, Little Ant",5,1
@@ -464,7 +464,7 @@ el_grade,module_num,student_teacher,materials,copy_num,available
 2,4,Student,"Places for Butterfiles, Revised Edition",70,1
 3,1,Teacher,"Nasreen's Secret School, Rain School, More than Anything Else, My Librarian is a Camel, Waiting for the Biblioburro, Thank You Mr. Faulkner",1,0
 3,1,Teacher,"Nasreen's Secret School, Rain School, More than Anything Else, My Librarian is a Camel, Waiting for the Biblioburro, Thank You Mr. Faulkner",2,0
-3,1,Teacher,"Nasreen's Secret School, Rain School, More than Anything Else, My Librarian is a Camel, Waiting for the Biblioburro, Thank You Mr. Faulkner",3,1
+3,1,Teacher,"Nasreen's Secret School, Rain School, More than Anything Else, My Librarian is a Camel, Waiting for the Biblioburro, Thank You Mr. Faulkner",3,0
 3,2,Teacher,"Lizards, Frods, and Polliwogs, Bullfrogs at Magnolia Circle, Everything you need to knwo about Frogs and Other Slippery Creatures",1,1
 3,2,Teacher,"Lizards, Frods, and Polliwogs, Bullfrogs at Magnolia Circle, Everything you need to knwo about Frogs and Other Slippery Creatures",2,1
 3,2,Teacher,"Lizards, Frods, and Polliwogs, Bullfrogs at Magnolia Circle, Everything you need to knwo about Frogs and Other Slippery Creatures",3,1
