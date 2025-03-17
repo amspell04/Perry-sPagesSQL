@@ -1,26 +1,26 @@
 el_grade,module_num,student_teacher,materials,copy_num,available
-2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",1,0
-2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",2,0
+2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",1,1
+2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",2,1
 2,2,Teacher,"Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",1,1
 2,2,Teacher,"Fossils, Paleontology, Stone Girl, Bone Girl, Curious about Fossils,, Dog that Dug for Dinosaurs, Teacher Manuals",2,1
 2,3,Teacher,"Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",1,1
 2,3,Teacher,"Plant Secrets, National Geographic Readers: Seed to Plant, From Seed to Plant, What is Pollination, Teacher Manuals",2,1
 2,4,Teacher,"Hey, Little Ant, Little Hummingbird, Lizard and the Sun, Ant and the Grasshopper, Place for Bats, Place for Butterflies, Teacher Manuals",1,1
 2,4,Teacher,"Hey, Little Ant, Little Hummingbird, Lizard and the Sun, Ant and the Grasshopper, Place for Bats, Place for Butterflies, Teacher Manuals",2,1
-2,1,Student,Dot,1,0
-2,1,Student,Dot,2,0
-2,1,Student,Dot,3,0
-2,1,Student,Dot,4,0
-2,1,Student,Dot,5,0
-2,1,Student,Dot,6,0
-2,1,Student,Dot,7,0
-2,1,Student,Dot,8,0
-2,1,Student,Dot,9,0
-2,1,Student,Dot,10,0
-2,1,Student,Dot,11,0
-2,1,Student,Dot,12,0
-2,1,Student,Dot,13,0
-2,1,Student,Dot,14,0
+2,1,Student,Dot,1,1
+2,1,Student,Dot,2,1
+2,1,Student,Dot,3,1
+2,1,Student,Dot,4,1
+2,1,Student,Dot,5,1
+2,1,Student,Dot,6,1
+2,1,Student,Dot,7,1
+2,1,Student,Dot,8,1
+2,1,Student,Dot,9,1
+2,1,Student,Dot,10,1
+2,1,Student,Dot,11,1
+2,1,Student,Dot,12,1
+2,1,Student,Dot,13,1
+2,1,Student,Dot,14,1
 2,1,Student,Off to Class,1,1
 2,1,Student,Off to Class,2,1
 2,1,Student,Off to Class,3,1
