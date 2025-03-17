@@ -61,8 +61,10 @@ async def add_checkout(checkout_data: dict = Body(...)):
     for index, row in rows_to_update.iterrows():
         if row["available"] >= 1:
             df.loc[index, "available"] -= 1
-        else:
-            raise HTTPException(status_code=400, detail="insufficient resources")
+        # else:
+        #     raise HTTPException(status_code=400, detail="insufficient resources")
+
+        # WORK HERE BECAUSE IF FIRST ARE CHECKED OUT IN DOT DOES NOT REACH OTHER RESOURCES
 
     write_csv(df, "book_data.csv")
 
