@@ -12,17 +12,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-df = pd.read_csv("book_data.csv")
-cf = pd.read_csv("check_data.csv")
-
-data = df[["el_grade", "module_num", "student_teacher", "materials", "copy_num", "available"]].values.tolist()
-check_data = cf[["check_id", "el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom"]].values.tolist()
 
 def write_csv(df, filepath):
     df.to_csv(filepath, index=False)
 
 @app.get("/getdata")
 async def get_data():
+    df = pd.read_csv("book_data.csv")
+    data = df[["el_grade", "module_num", "student_teacher", "materials", "copy_num", "available"]].values.tolist()
+
     modified_data = []
     for row in data:
         modified_row = row[:]  
@@ -36,6 +34,9 @@ async def get_data():
 
 @app.get("/getcheckoutlist")
 async def get_checkout():
+    cf = pd.read_csv("check_data.csv")
+    check_data = cf[["check_id", "el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom"]].values.tolist()
+
     return check_data
 
 @app.post("/addcheckout")
