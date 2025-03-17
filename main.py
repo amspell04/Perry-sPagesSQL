@@ -92,3 +92,44 @@ async def add_checkout(checkout_data: dict = Body(...)):
 
     return {"message": "Checkout added successfully", "checkout_id": checkout_id}
 
+
+
+@app.post("/addcheckin")
+async def add_checkin(checkin_data: dict = Body(...)):
+
+    df = pd.read_csv("book_data.csv")
+    cf = pd.read_csv("check_data.csv")
+    
+    material = checkin_data["materials"]
+    num_checked = checkin_data["num_checked"]
+    copynumbertocheck = num_checked
+
+    matching_rows = df[df["materials"] == material]
+    if matching_rows.empty:
+        raise HTTPException(status_code=404, detail="Material not found")
+
+    # Update available count in book_data.csv
+
+    for index, row in matching_rows.iterrows():
+        if copynumbertocheck > 0:
+            if row["available"] == 0:
+                df.loc[index, "available"] += 1
+                copynumbertocheck -= 1
+        else:
+            break
+            # else:
+        #     raise HTTPException(status_code=400, detail="insufficient resources")
+
+        # WORK HERE BECAUSE IF FIRST ARE CHECKED OUT IN DOT DOES NOT REACH OTHER RESOURCES
+
+    write_csv(df, "book_data.csv")
+
+    if checkin_data["check_id"] not in cf["check_id"].values:
+        raise HTTPException(status_code=404, detail="Checkout ID not found")
+
+    # Filter out the row with the specified checkout ID
+    cf = cf[cf["check_id"] != checkin_data["check_id"]]
+
+    write_csv(cf, "check_data.csv")
+    id = checkin_data["check_id"]
+    return {"message": f"Checkout with ID { id } removed successfully"}

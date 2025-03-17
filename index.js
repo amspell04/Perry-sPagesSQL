@@ -236,7 +236,7 @@ async function getcheckoutlist() {
 }
 
 
-function populateCheckoutTable(filteredData) {
+async function populateCheckoutTable(filteredData) {
     const tbody = document.querySelector("#checks table tbody");
     tbody.innerHTML = '';
     filteredData.forEach(row => {
@@ -258,9 +258,45 @@ function populateCheckoutTable(filteredData) {
         btn.style.border = "1px solid #5da4b6";
         btn.style.padding = "8px";
 
-        btn.addEventListener("click", function() {
+        btn.addEventListener("click", async function() {
             console.log("Check In button clicked for row:", row);
-            // Add your check-in logic here
+            console.log(' current row in check', row)
+            try {
+                const checkinresponse = await fetch("http://127.0.0.1:8000/addcheckin", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        check_id: row[0],
+                        el_grade: row[1],
+                        module_num: row[2],
+                        student_teacher: row[3],
+                        materials: row[4],
+                        num_checked: row[5],
+                        classroom: row[6],
+                    }),
+                });
+
+                if (checkinresponse.ok) {
+                    alert("Checkin processed successfully!");
+            
+                    // Refresh checkout table
+                    const checkoutListResponse = await getcheckoutlist();
+                    console.log(checkoutListResponse)
+            
+                    // Refresh main table
+                    const updatedDataResponse = await getdatalist();
+                    console.log(updatedDataResponse)
+            
+            
+                } else {
+                    alert("Failed to process checkin.");
+                }
+            } catch (error) {
+                console.error("Error processing checkin:", error);
+                alert("An error occurred during checkin.");
+            }
         });
 
         buttonCell.appendChild(btn);
