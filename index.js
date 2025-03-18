@@ -1,18 +1,37 @@
 let checkin = true;
 let checkout = false;
 let count = 0;
-let modulename;
-let teachstud;
-let setmaterial;
+let elgrade;
+let modulenum;
+let ts;
+let material;
 let classroom;
+let numcopies;
+let data;
 
-document.addEventListener("DOMContentLoaded", async function () {
+const checkinbuttons = {}; 
+const checkinstatus = document.querySelector('#checkin')
+const checkoutstatus = document.querySelector('#checkout')
+const process = document.querySelector('#processcheck')
+let checkinenabled = false
+let checkoutenabled = false
+
+document.addEventListener("DOMContentLoaded", async() =>{
+    const dataresponse = await getdatalist();
+    console.log(dataresponse);
+    const checkresponse = await getcheckoutlist();
+    console.log(checkresponse);
+
+});
+
+
+async function getdatalist() {
     let body = document.querySelector("#curr");
     if (!body) return;
 
     try {
         let response = await fetch("http://127.0.0.1:8000/getdata");
-        let data = await response.json();
+        data = await response.json();
 
         let contentbox = document.createElement('div');
         contentbox.className = 'content-box';
@@ -173,36 +192,119 @@ document.addEventListener("DOMContentLoaded", async function () {
     } catch (error) {
         console.error("Error fetching data:", error);
     }
-});
+}
 
-  document.addEventListener("DOMContentLoaded", async function () {
+async function getcheckoutlist() {
   let body = document.querySelector("#checks"); 
   if (!body) return;
 
   try {
     let response = await fetch("http://127.0.0.1:8000/getcheckoutlist"); 
-    let data = await response.json();
+    let checkoutdata = await response.json();
     let div = document.createElement("div");
     div.className = 'checkout-box';
 
-    data.forEach(row => {
-      let rowchild = document.createElement('div');
-      rowchild.className = 'checkout-row';
-      rowchild.textContent = `Checkout ID: ${row}`;
-      div.appendChild(rowchild);
-      rowchild.addEventListener('click', () =>{
-      console.log('here will be the implementation to open a popup with the current checkout id and details', row)
-    })
-    });
+    let table = document.createElement("table");
+    table.style.borderCollapse = "collapse";
 
-   
+    let thead = document.createElement("thead");
+    let headerRow = document.createElement("tr");
+    ["Checkout ID", "Grade", "Module", "Type", "Materials", "Number of Copies", "Classroom",  "Check In"].forEach(headerText => {
+        let th = document.createElement("th");
+        th.textContent = headerText;
+        th.style.border = "1px solid #5da4b6";
+        th.style.padding = "8px";
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    let tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+    div.appendChild(table);
+    body.appendChild(div);
+
+
+    console.log(checkoutdata)
+    populateCheckoutTable(checkoutdata)
 
     body.appendChild(div);
 
   } catch (error) {
     console.error("Error fetching data:", error);
   }
-});
+}
+
+
+async function populateCheckoutTable(filteredData) {
+    const tbody = document.querySelector("#checks table tbody");
+    tbody.innerHTML = '';
+    filteredData.forEach(row => {
+        let tr = document.createElement("tr");
+        row.forEach(cellData => {
+            let td = document.createElement("td");
+            td.textContent = cellData;
+            td.style.border = "1px solid #5da4b6";
+            td.style.padding = "8px";
+            tr.appendChild(td);
+        });
+
+        let buttonCell = document.createElement("td");
+        buttonCell.style.border = "1px solid #5da4b6";
+        buttonCell.style.padding = "8px";
+        console.log(' adding button')
+        let btn = document.createElement("button");
+        btn.textContent = 'Check In';
+        btn.style.border = "1px solid #5da4b6";
+        btn.style.padding = "8px";
+
+        btn.addEventListener("click", async function() {
+            console.log("Check In button clicked for row:", row);
+            console.log(' current row in check', row)
+            try {
+                const checkinresponse = await fetch("http://127.0.0.1:8000/addcheckin", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        check_id: row[0],
+                        el_grade: row[1],
+                        module_num: row[2],
+                        student_teacher: row[3],
+                        materials: row[4],
+                        num_checked: row[5],
+                        classroom: row[6],
+                    }),
+                });
+
+                if (checkinresponse.ok) {
+                    alert("Checkin processed successfully!");
+            
+                    // Refresh checkout table
+                    const checkoutListResponse = await getcheckoutlist();
+                    console.log(checkoutListResponse)
+            
+                    // Refresh main table
+                    const updatedDataResponse = await getdatalist();
+                    console.log(updatedDataResponse)
+            
+            
+                } else {
+                    alert("Failed to process checkin.");
+                }
+            } catch (error) {
+                console.error("Error processing checkin:", error);
+                alert("An error occurred during checkin.");
+            }
+        });
+
+        buttonCell.appendChild(btn);
+        tr.appendChild(buttonCell);
+
+        tbody.appendChild(tr);
+    });
+}
 
 
 const checkinup = document.querySelector('#increasein');
@@ -223,81 +325,146 @@ checkindown.addEventListener('click', () =>{
 
 });
 
+
+// CHECKOUT TAB
+
 document.addEventListener("DOMContentLoaded", async function () {
-    console.log('check processed')
+    console.log('adding checkout features');
 
     try {
         let response = await fetch("http://127.0.0.1:8000/getdata");
-        let data = await response.json();
+        data = await response.json();
 
-    if(checkin){
+        const process = document.querySelector('#processcheck');
 
-        const checkdiv = document.querySelector(`.class-btn`)
+        let set = document.querySelector(`#set`);
+        let cl = document.querySelector(`#classroom`);
 
-        // Module Filter Buttons
-        let modcheck = document.createElement('div');
-        modcheck.textContent = 'Filter Modules: ';
-        checkdiv.appendChild(modcheck);
+        const searchInput = document.getElementById('set');
+        const suggestionsList = document.getElementById('suggestions');
 
-        // Get unique module numbers
-        const uniqueModules = [...new Set(data.map(row => row[1]))]; 
+        function populateSuggestions(inputValue) {
+            suggestionsList.innerHTML = '';
 
-        const moduleButtons = {}; 
+            if (inputValue.length === 0) {
+                return;
+            }
 
-        uniqueModules.forEach(module => {
-            const button = document.createElement('button');
-            button.className = 'filterbuttons'
-            button.textContent = module;
-            button.addEventListener('click', () => {
-                moduleButtons[module] = !moduleButtons[module]; 
-                button.classList.toggle('selected');
-                applyFilters();
+            const uniqueMaterials = new Set();
+
+            const filteredTitles = data.filter(row => {
+                const materials = String(row[3]);
+                if (materials.includes(inputValue)) {
+                    if (!uniqueMaterials.has(materials)) {
+                        uniqueMaterials.add(materials);
+                        return true;
+                    }
+                }
+                return false;
             });
-            modcheck.appendChild(button);
-            moduleButtons[module] = false; 
+
+            uniqueMaterials.forEach(material => {
+                const listItem = document.createElement('li');
+                listItem.className = 'suggestions';
+                listItem.textContent = material;
+                listItem.addEventListener('click', () => {
+                    searchInput.value = material;
+                    suggestionsList.innerHTML = '';
+                });
+                suggestionsList.appendChild(listItem);
+            });
+        }
+
+        searchInput.addEventListener('input', () => {
+            populateSuggestions(searchInput.value);
         });
 
+        document.addEventListener('click', (event) => {
+            if (event.target !== searchInput && event.target !== suggestionsList) {
+                suggestionsList.innerHTML = '';
+            }
+        });
 
-        let ts = document.querySelector(`#teachstud`)
-        let tsvalue = ts.value // this should be a button instead
-        console.log('teacher or student set being checked in', tsvalue)
+        process.addEventListener('click', async () => {
+            const material = set.value;
+            const classroom = cl.value;
+            const numCheck = count;
 
-        let set = document.querySelector(`#setname`)
-        let setvalue = set.value // this should be a button instead
-        console.log('set materials being checked in', setvalue)
+            if (!material || !classroom || numCheck <= 0) {
+                alert("Please fill in all checkout details.");
+                return;
+            }
 
-        let cl = document.querySelector(`#classroom`)
-        let classvalue = cl.value 
-        console.log('classroom checking in', classvalue)
+            // Find matching data rows
+            const matchingItems = data.filter(row => row[3] === material);
 
-        checkin = !checkin
+            if (matchingItems.length === 0) {
+                alert("Material not found.");
+                return;
+            }
 
-        const bookToCheckout = {
-            el_grade: "1",
-            module_num: "1",
-            student_teacher: "Student",
-            materials: "Dot",
-            numcheck: 2,
-        };
-        process_checkout(bookToCheckout)
+            const totalAvailable = matchingItems.reduce((sum, item) => sum + item[5], 0);
+
+            if (totalAvailable >= numCheck) {
+                // Process checkout
+                const firstMatchingItem = matchingItems[0];
+                const elGrade = firstMatchingItem[0];
+                const moduleNum = firstMatchingItem[1];
+                const ts = firstMatchingItem[2];
+
+                try {
+                    const checkoutResponse = await fetch("http://127.0.0.1:8000/addcheckout", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            el_grade: elGrade,
+                            module_num: moduleNum,
+                            student_teacher: ts,
+                            materials: material,
+                            num_checked: numCheck,
+                            classroom: classroom,
+                        }),
+                    });
+
+                    if (checkoutResponse.ok) {
+                        alert("Checkout processed successfully!");
+                
+                        // Refresh checkout table
+                        const checkoutListResponse = await getcheckoutlist();
+                        console.log(checkoutListResponse)
+                
+                        // Refresh main table
+                        const updatedDataResponse = await getdatalist();
+                        console.log(updatedDataResponse)
+                
+                        // // Update the main table data and repopulate
+                        // data = updatedData; // Update the global data variable
+                        // applyFilters(); // Reapply filters to update the main table
+                
+                    } else {
+                        alert("Failed to process checkout.");
+                    }
+                } catch (error) {
+                    console.error("Error processing checkout:", error);
+                    alert("An error occurred during checkout.");
+                }
+            } else {
+                alert(`Insufficient resources. Available: ${totalAvailable}, Requested: ${numCheck}`);
+            }
+        });
+
+    } catch (error) {
+        console.log('error grabbing data', error);
     }
-    } catch (error){
-        console.log('error grabbing data', error)
-    }
-    
-    //resetting variable values
+
     count = 0;
     resetchecknum(count);
-    modulename  = '';
-    teachstud = '';
-    setmaterial = '';
-    classroom = ''; 
+});
 
-})
-
-
-
-function resetchecknum(count){
-    const checkoutnum = document.querySelector('#checkin-num')
-    checkoutnum.textContent = `${count}`; 
+function resetchecknum(count) {
+    const checkoutnum = document.querySelector('#checkin-num');
+    checkoutnum.textContent = `${count}`;
 }
+

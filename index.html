@@ -16,51 +16,31 @@
 
         <div id="left">
         <div class="content"> 
-          <h2>Check In/Out Materials</h2>
-            <h3>Check In</h3>
+          <h2>Check Out Materials</h2>
+        
             <div class="checkin-body">
-              
+
+              <p>Number of Copies</p>
               <div class="check-btn">
                 <button id="decreasein">-</button>
                 <p id="checkin-num">0</p>
                 <button id="increasein">+</button>
               </div>
            
-              <div class="class-btn">
-                <!-- <label for="modname">Module Number:</label>
-                <input type="text" id="modname" name="modname"> -->
-                <!-- <label for="teachstud">Teacher/Student Set:</label>
-                <input type="text" id="teachstud" name="teachstud">
-                <label for="setname">Set Materials:</label>
-                <input type="text" id="setname" name="setname"> -->
-                <label for="classroom">Classroom checking out:</label>
-                <input type="text" id="classroom" name="classroom">
+          
+              <label for="set">Select Set Materials:</label>
+              <input type="text" id="set" name="set" placeholder="Enter book title...">
+              <ul id="suggestions"></ul>
+
+
+              <label for="classroom">Classroom Checking In/Out:</label>
+              <input type="text" id="classroom" name="classroom">
+
               </div>
-           
-              </div>
-            <div> 
+            <div id="process-div"> 
               <button id="processcheck">Process</button>
             </div>
-            <!-- <h3>Check Out</h3> -->
-            <!-- <div class="checkin-body">
-              <div class="check-btn">
-                <button id="decreaseout">-</button>
-                <p id="checkout-num">0</p>
-                <button id="increaseout">+</button>
-              </div>
-              <div class="mod-btn">
-                <label for="modname2">Module name:</label>
-                <input type="text" id="modname2" name="modname">
-              </div>
-              <div class="class-btn">
-                <label for="classname2">Classroom checking out:</label>
-                <input type="text" id="classname2" name="classname">
-              </div>
-           
-              </div> -->
-          <!-- <div> 
-            <button>Process</button>
-          </div> -->
+          
         </div>
         <div class="content" id="checks"> 
           <h2>Manage Checkout Requests</h2>  
