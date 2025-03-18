@@ -25,9 +25,9 @@ async def get_data():
     for row in data:
         modified_row = row[:]  
         if modified_row[5] == 1:
-            modified_row[5] = 'In'
+            modified_row[5] = True
         else:
-            modified_row[5] = 'Out'
+            modified_row[5] = False
         modified_data.append(modified_row)
     return modified_data
 
