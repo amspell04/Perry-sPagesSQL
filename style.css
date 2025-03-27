@@ -1,13 +1,12 @@
 #title{
-    background-color: #5da4b6;
+    height: 150px;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 30px;
     color: #FFFF;
-    border-radius: 18px;
     font-size: 40px;
-    border: 10px solid #666;
 }
+
 
 input{
     padding: 5px;
@@ -30,14 +29,6 @@ button{
     padding: 10px;
 }
 
-#processcheck{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 14px;
-    font-weight: bold;
-}
 
 
 button.disabled {
@@ -57,7 +48,9 @@ button.enabled{
 }
 
 #checks{
-    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 button:hover{
@@ -66,18 +59,22 @@ button:hover{
 }
 
 body{
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: Helvetica, sans-serif;
     background-color: #D9D9D9;
 }
 
 #mainbdy{
     display: flex;
+    height: 100%;
 
 }
 
 #left{
     width: 40%;
+    height: 600px;
     display: flex;
     flex-direction: column;
 }
@@ -85,13 +82,11 @@ body{
 .content{
     text-align: left;
     background-color: #FFFF;
-    border-color: #5da4b6;;
     border-width: 20px;
     border-style: solid;
     border-radius: 40px;
+    margin: 5px;
     padding: 20px;
-    margin: 10px;
-
 }
 
 h2{
@@ -102,7 +97,32 @@ h2{
 
 #curr{
     width: 100%;
-    height: 800px;
+    height: 670px;
+}
+
+#checkout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: small;
+}
+
+#inputboxes{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#header{
+    background-color: #0AA4B4;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #toolbar{
@@ -110,10 +130,11 @@ h2{
     padding: 10px;
     border-radius: 20px;
     justify-content: space-around;
+    display: flex;
 }
 
 .content-box{
-    height: 600px;
+    height: 520px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -128,10 +149,7 @@ h2{
     margin: 5px;
 }
 
-.checkin-body{
-    display: flex;
-    flex-direction: column;
-}
+
 
 
 .check-btn{
@@ -142,17 +160,6 @@ h2{
 
 }
 
-.check-btn button{
-    margin: 5px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 5px;
-    font-size: 16px;
-}
 
 .check-btn p{
     margin: 5px;
@@ -181,8 +188,7 @@ h2{
 }
 
 .checkout-box{
-    height: 300px;
-    margin: 10px;
+    height: 590px;
     display: flex;
     flex-direction: column;
     overflow: auto;

@@ -11,6 +11,7 @@ let data;
 
 const checkinbuttons = {}; 
 const checkinstatus = document.querySelector('#checkin')
+const newcheckout = document.querySelector('#newcheckout')
 const checkoutstatus = document.querySelector('#checkout')
 const process = document.querySelector('#processcheck')
 let checkinenabled = false
@@ -23,6 +24,12 @@ document.addEventListener("DOMContentLoaded", async() =>{
     console.log(checkresponse);
 
 });
+
+// newcheckout.addEventListener('click', () =>{
+//     console.log('making smaller')
+//     const checkoutbox = document.querySelector('.checkout-box')
+//     checkoutbox.style.height = '100px';
+// })
 
 
 async function getdatalist() {
@@ -209,7 +216,7 @@ async function getcheckoutlist() {
 
     let thead = document.createElement("thead");
     let headerRow = document.createElement("tr");
-    ["Checkout ID", "Grade", "Module", "Type", "Materials", "Number of Copies", "Classroom",  "Check In"].forEach(headerText => {
+    ["ID", "Materials", "# of Copies", "Classroom",  "Check In"].forEach(headerText => {
         let th = document.createElement("th");
         th.textContent = headerText;
         th.style.border = "1px solid #5da4b6";
@@ -269,12 +276,9 @@ async function populateCheckoutTable(filteredData) {
                     },
                     body: JSON.stringify({
                         check_id: row[0],
-                        el_grade: row[1],
-                        module_num: row[2],
-                        student_teacher: row[3],
-                        materials: row[4],
-                        num_checked: row[5],
-                        classroom: row[6],
+                        materials: row[1],
+                        num_checked: row[2],
+                        classroom: row[3],
                     }),
                 });
 

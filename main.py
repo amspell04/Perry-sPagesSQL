@@ -35,7 +35,7 @@ async def get_data():
 @app.get("/getcheckoutlist")
 async def get_checkout():
     cf = pd.read_csv("check_data.csv")
-    check_data = cf[["check_id", "el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom"]].values.tolist()
+    check_data = cf[["check_id", "materials", "num_checked", "classroom"]].values.tolist()
 
     return check_data
 
