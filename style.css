@@ -63,7 +63,7 @@ body{
     padding: 0;
     width: 100%;
     font-family: Helvetica, sans-serif;
-    background-color: #D9D9D9;
+    background-color: #D1F5F9;
 }
 
 #mainbdy{
@@ -83,9 +83,9 @@ body{
     text-align: left;
     background-color: #FFFF;
     border-width: 20px;
+    border-color: #0AA4B4;
     border-style: solid;
-    border-radius: 40px;
-    margin: 5px;
+    margin: 20px;
     padding: 20px;
 }
 
