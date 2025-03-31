@@ -162,11 +162,35 @@ async function getdatalist() {
             filteredData.forEach(row => {
                 let tr = document.createElement("tr");
                 row.forEach(cellData => {
+                    if (cellData === "Available") {
+                        let td = document.createElement("td");
+                        td.style.border = "1px solid #5da4b6";
+                        td.style.padding = "8px";
+                        td.style.color = "#228B22";
+                        td.style.fontWeight = "bold";
+                        td.style.textAlign = "center";
+                        td.textContent = "Available"
+                        tr.appendChild(td);
+
+                    }else if
+                    (cellData === "Unavailable"){
+                        let td = document.createElement("td");
+                        td.style.border = "1px solid #5da4b6";
+                        td.style.padding = "8px";
+                        td.style.color = "#C70039";
+                        td.style.fontWeight = "bold";
+                        td.style.textAlign = "center";
+                        td.textContent = "Unavailable"
+                        tr.appendChild(td);
+                    }else{
                     let td = document.createElement("td");
                     td.textContent = cellData;
                     td.style.border = "1px solid #5da4b6";
                     td.style.padding = "8px";
                     tr.appendChild(td);
+
+                    }
+
                 });
                 tbody.appendChild(tr);
             });
