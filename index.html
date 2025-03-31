@@ -11,31 +11,39 @@
   <body>
     <main>
       <div id="header">
+        <div id="logo">
+        <img id="perry" src="perry.png" alt="perry the dragon">
         <h1 id="title">Perry's Pages</h1> 
+      </div>
+
 
         <div class="content" id="checkout"> 
           <h3>Create New Checkout</h3>
+
+          <div class="submissions">
         
-
-            <div class="copies">
-              <p>Number of Copies:</p>
-              <div class="check-btn">
-                <button id="decreasein">-</button>
-                <p id="checkin-num">0</p>
-                <button id="increasein">+</button>
-              </div>
-            </div> 
+          <div class="copies">
+            <p>Number of Copies:</p>
+            <div class="check-btn">
+              <button id="decreasein">-</button>
+              <p id="checkin-num">0</p>
+              <button id="increasein">+</button>
+            </div>
+          </div> 
           
-              <label for="set">Select Set Materials:</label>
-              <input type="text" id="set" name="set" placeholder="Enter book title...">
-              <ul id="suggestions"></ul>
+          <div class="sets">
+            <label for="set">Select Set Materials:</label>
+            <input type="text" id="set" name="set" placeholder="Enter book title...">
+            <ul id="suggestions"></ul>
+          </div>
 
+          <div class="class">
+            <label for="classroom">Classroom Checking In/Out:</label>
+            <input type="text" id="classroom" name="classroom" placeholder="Enter the class name...">
+          </div>
+        </div>
 
-              <label for="classroom">Classroom Checking In/Out:</label>
-              <input type="text" id="classroom" name="classroom">
-
-              
-              <button id="processcheck">Process</button>          
+          <button id="processcheck">Process</button>          
         </div>
 
       </div>
@@ -45,13 +53,13 @@
         <div id="left">
 
           <div class="content" id="checks"> 
-            <h2>Manage Material Checkout</h2>  
+            <h3>Manage Material Checkout</h3>  
           
           </div>
 </div>
 
         <div class="content" id="curr"> 
-          <h2>Manage Curriculum Records</h2>
+          <h3>Manage Curriculum Records</h3>
           <div id="toolbar"> 
         
           </div>

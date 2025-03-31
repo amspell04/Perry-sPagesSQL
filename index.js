@@ -47,6 +47,7 @@ async function getdatalist() {
 
         // Module Filter Buttons
         let moduleFilterDiv = document.createElement('div');
+        moduleFilterDiv.className = 'filter'
         moduleFilterDiv.textContent = 'Filter Modules: ';
         toolbar.appendChild(moduleFilterDiv);
 
@@ -55,6 +56,8 @@ async function getdatalist() {
 
         const moduleButtons = {}; 
 
+        let modulebtnDiv = document.createElement('div');
+        modulebtnDiv.className = 'smallbtns'
         uniqueModules.forEach(module => {
             const button = document.createElement('button');
             button.className = 'filterbuttons'
@@ -64,12 +67,15 @@ async function getdatalist() {
                 button.classList.toggle('selected');
                 applyFilters();
             });
-            moduleFilterDiv.appendChild(button);
+            modulebtnDiv.appendChild(button);
             moduleButtons[module] = false; 
         });
+        moduleFilterDiv.appendChild(modulebtnDiv);
+
 
          // Teacher/Student Filter Buttons
          let tsFilterDiv = document.createElement('div');
+         tsFilterDiv.className = 'filter'
          tsFilterDiv.textContent = 'Filter Teacher/Student: ';
          toolbar.appendChild(tsFilterDiv);
  
@@ -78,6 +84,9 @@ async function getdatalist() {
  
          const tsButtons = {}; 
  
+
+        let tsbuttondiv = document.createElement('div');
+        tsbuttondiv.className = 'mediumbtns'
          uniqueVals.forEach(module => {
              const button = document.createElement('button');
              button.className = 'filterbuttons'
@@ -87,12 +96,15 @@ async function getdatalist() {
                  button.classList.toggle('selected');
                  applyFilters();
              });
-             tsFilterDiv.appendChild(button);
+             tsbuttondiv.appendChild(button);
              tsButtons[module] = false; 
          });
+        tsFilterDiv.appendChild(tsbuttondiv);
+
         
         // Grade filter buttons
         let gradeFilterDiv = document.createElement('div');
+        gradeFilterDiv.className = 'filter'
         gradeFilterDiv.textContent = 'Filter Grades: ';
         toolbar.appendChild(gradeFilterDiv);
 
@@ -101,6 +113,8 @@ async function getdatalist() {
 
         const gradeButtons = {}; 
 
+        let gradebtndiv = document.createElement('div');
+        gradebtndiv.className = 'smallbtns'
         uniqueGrades.forEach(module => {
             const button = document.createElement('button');
             button.className = 'filterbuttons'
@@ -110,12 +124,15 @@ async function getdatalist() {
                 button.classList.toggle('selected');
                 applyFilters();
             });
-            gradeFilterDiv.appendChild(button);
+            gradebtndiv.appendChild(button);
             gradeButtons[module] = false; // Initialize button state
         });
+        gradeFilterDiv.appendChild(gradebtndiv);
+
 
         // Materials Filter Input
         let materialsFilterInput = document.createElement('input');
+        materialsFilterInput.className = 'input'
         materialsFilterInput.type = 'text';
         materialsFilterInput.placeholder = 'Filter Materials...';
         toolbar.appendChild(materialsFilterInput);
@@ -347,7 +364,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         const searchInput = document.getElementById('set');
         const suggestionsList = document.getElementById('suggestions');
 
+
         function populateSuggestions(inputValue) {
+            suggestionsList.style.display = 'block';
             suggestionsList.innerHTML = '';
 
             if (inputValue.length === 0) {
@@ -374,6 +393,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 listItem.addEventListener('click', () => {
                     searchInput.value = material;
                     suggestionsList.innerHTML = '';
+                    suggestionsList.style.display = 'none';
                 });
                 suggestionsList.appendChild(listItem);
             });
@@ -407,7 +427,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 return;
             }
 
-            const totalAvailable = matchingItems.reduce((sum, item) => sum + item[5], 0);
+            const totalAvailable = matchingItems.reduce((sum, item) => sum + ( item[5] == "Available"), 0);
 
             if (totalAvailable >= numCheck) {
                 // Process checkout
