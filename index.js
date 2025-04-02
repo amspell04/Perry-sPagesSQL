@@ -291,11 +291,15 @@ async function populateCheckoutTable(filteredData) {
             td.textContent = cellData;
             td.style.border = "1px solid #5da4b6";
             td.style.padding = "8px";
+            if (td.cellData != "Check In"){
+                td.addEventListener('click', getmodal)
+            }
             tr.appendChild(td);
         });
 
         // Modal click event
-        tr.onclick = async function() {
+        async function getmodal() {
+            var modal = document.getElementById("myModal");
             modal.style.display = "block";
 
             let response = await fetch("http://127.0.0.1:8000/getmodalcontent");
