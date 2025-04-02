@@ -112,6 +112,7 @@ h3{
 }
 
 #processcheck{
+    margin-top: 20px;
     height: 30px;
     width: 100px;
 }
@@ -203,6 +204,7 @@ h3{
 
 .check-btn{
     display: flex;
+    padding-top: 5px;
     flex-direction: row;
     justify-content: left;
     align-items: center;
