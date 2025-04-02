@@ -283,12 +283,13 @@ async function getcheckoutlist() {
   }
 }
 
-
 async function populateCheckoutTable(filteredData) {
     const tbody = document.querySelector("#checks table tbody");
     tbody.innerHTML = '';
-    filteredData.forEach(row => {
+
+    for (let row of filteredData) {
         let tr = document.createElement("tr");
+
         row.forEach(cellData => {
             let td = document.createElement("td");
             td.textContent = cellData;
@@ -297,10 +298,56 @@ async function populateCheckoutTable(filteredData) {
             tr.appendChild(td);
         });
 
+        // Modal click event
+        tr.onclick = async function() {
+            modal.style.display = "block";
+
+            let response = await fetch("http://127.0.0.1:8000/getmodalcontent");
+            let data = await response.json();
+
+            let modalcontent = document.querySelector('.modal-content');
+            modalcontent.innerHTML = " "
+            let table = document.createElement("table");
+            table.className = 'modaltable';
+            table.style.borderCollapse = "collapse";
+
+            let thead = document.createElement("thead");
+            let headerRow = document.createElement("tr");
+            ["ID", "Grade", "Module", "Type", "Materials", "# of Copies", "Classroom"].forEach(headerText => {
+                let th = document.createElement("th");
+                th.textContent = headerText;
+                th.style.border = "1px solid #5da4b6";
+                th.style.padding = "8px";
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            let modalTbody = document.createElement("tbody");
+            table.appendChild(modalTbody);
+
+            data.forEach(dataRow => {
+                if (dataRow[0] == row[0]) {
+                    let tr = document.createElement("tr");
+                    dataRow.forEach(cellData => {
+                        let td = document.createElement("td");
+                        td.textContent = cellData;
+                        td.style.border = "1px solid #5da4b6";
+                        td.style.padding = "8px";
+                        tr.appendChild(td);
+                    });
+                    modalTbody.appendChild(tr);
+                }
+            });
+   
+            modalcontent.appendChild(table);
+        };
+
+        // Add "Check In" button to each row
         let buttonCell = document.createElement("td");
         buttonCell.style.border = "1px solid #5da4b6";
         buttonCell.style.padding = "8px";
-        console.log(' adding button')
+
         let btn = document.createElement("button");
         btn.textContent = 'Check In';
         btn.style.border = "1px solid #5da4b6";
@@ -308,7 +355,7 @@ async function populateCheckoutTable(filteredData) {
 
         btn.addEventListener("click", async function() {
             console.log("Check In button clicked for row:", row);
-            console.log(' current row in check', row)
+
             try {
                 const checkinresponse = await fetch("http://127.0.0.1:8000/addcheckin", {
                     method: "POST",
@@ -325,16 +372,15 @@ async function populateCheckoutTable(filteredData) {
 
                 if (checkinresponse.ok) {
                     alert("Checkin processed successfully!");
-            
+
                     // Refresh checkout table
                     const checkoutListResponse = await getcheckoutlist();
-                    console.log(checkoutListResponse)
-            
+                    console.log(checkoutListResponse);
+
                     // Refresh main table
                     const updatedDataResponse = await getdatalist();
-                    console.log(updatedDataResponse)
-            
-            
+                    console.log(updatedDataResponse);
+
                 } else {
                     alert("Failed to process checkin.");
                 }
@@ -347,8 +393,9 @@ async function populateCheckoutTable(filteredData) {
         buttonCell.appendChild(btn);
         tr.appendChild(buttonCell);
 
+        // Append row to tbody
         tbody.appendChild(tr);
-    });
+    }
 }
 
 
@@ -516,3 +563,25 @@ function resetchecknum(count) {
     checkoutnum.textContent = `${count}`;
 }
 
+
+// modal controls
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

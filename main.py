@@ -39,6 +39,14 @@ async def get_checkout():
 
     return check_data
 
+@app.get("/getmodalcontent")
+async def get_modalcontent():
+    cf = pd.read_csv("check_data.csv")
+
+    check_data = cf[["check_id","el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom"]].values.tolist()
+
+    return check_data
+
 @app.post("/addcheckout")
 async def add_checkout(checkout_data: dict = Body(...)):
 
