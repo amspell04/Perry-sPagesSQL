@@ -25,12 +25,6 @@ document.addEventListener("DOMContentLoaded", async() =>{
 
 });
 
-// newcheckout.addEventListener('click', () =>{
-//     console.log('making smaller')
-//     const checkoutbox = document.querySelector('.checkout-box')
-//     checkoutbox.style.height = '100px';
-// })
-
 
 async function getdatalist() {
     let body = document.querySelector("#curr");
@@ -49,6 +43,7 @@ async function getdatalist() {
         let moduleFilterDiv = document.createElement('div');
         moduleFilterDiv.className = 'filter'
         moduleFilterDiv.textContent = 'Filter Modules: ';
+        moduleFilterDiv.style.font = "caption";
         toolbar.appendChild(moduleFilterDiv);
 
         // Get unique module numbers
@@ -77,6 +72,7 @@ async function getdatalist() {
          let tsFilterDiv = document.createElement('div');
          tsFilterDiv.className = 'filter'
          tsFilterDiv.textContent = 'Filter Teacher/Student: ';
+         tsFilterDiv.style.font = "caption";
          toolbar.appendChild(tsFilterDiv);
  
          // Get unique module numbers
@@ -106,6 +102,7 @@ async function getdatalist() {
         let gradeFilterDiv = document.createElement('div');
         gradeFilterDiv.className = 'filter'
         gradeFilterDiv.textContent = 'Filter Grades: ';
+        gradeFilterDiv.style.font = "caption";
         toolbar.appendChild(gradeFilterDiv);
 
         // Get unique module numbers
@@ -120,22 +117,19 @@ async function getdatalist() {
             button.className = 'filterbuttons'
             button.textContent = module;
             button.addEventListener('click', () => {
-                gradeButtons[module] = !gradeButtons[module]; // Toggle button state
+                gradeButtons[module] = !gradeButtons[module]; 
                 button.classList.toggle('selected');
                 applyFilters();
             });
             gradebtndiv.appendChild(button);
-            gradeButtons[module] = false; // Initialize button state
+            gradeButtons[module] = false;
         });
         gradeFilterDiv.appendChild(gradebtndiv);
 
 
         // Materials Filter Input
-        let materialsFilterInput = document.createElement('input');
-        materialsFilterInput.className = 'input'
-        materialsFilterInput.type = 'text';
-        materialsFilterInput.placeholder = 'Filter Materials...';
-        toolbar.appendChild(materialsFilterInput);
+        let materialsFilterInput = document.querySelector('#filtermat');
+      
 
         let table = document.createElement("table");
         table.style.borderCollapse = "collapse";
@@ -252,6 +246,8 @@ async function getcheckoutlist() {
     let div = document.createElement("div");
     div.className = 'checkout-box';
 
+    let materialsFilterInput = document.querySelector('#filtercheck');
+
     let table = document.createElement("table");
     table.style.borderCollapse = "collapse";
 
@@ -354,6 +350,7 @@ async function populateCheckoutTable(filteredData) {
         btn.style.padding = "8px";
 
         btn.addEventListener("click", async function() {
+            modal.style.display = "none";
             console.log("Check In button clicked for row:", row);
 
             try {

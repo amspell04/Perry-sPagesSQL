@@ -175,7 +175,7 @@ h3{
     align-items: center;
 }
 
-#toolbar{
+#toolbar, #toolbarcheck{
     background-color: #D9D9D9;
     padding: 10px;
     border-radius: 20px;
@@ -183,8 +183,19 @@ h3{
     display: flex;
 }
 
+.filterbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font:caption;
+}
+
 .content-box{
-    height: 520px;
+    height: 550px;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -243,7 +254,8 @@ h3{
 }
 
 .checkout-box{
-    height: 620px;
+    margin-top: 20px;
+    height: 530px;
     display: flex;
     flex-direction: column;
     overflow: auto;
