@@ -313,7 +313,7 @@ async function populateCheckoutTable(filteredData) {
 
             let thead = document.createElement("thead");
             let headerRow = document.createElement("tr");
-            ["ID", "Grade", "Module", "Type", "Materials", "# of Copies", "Classroom"].forEach(headerText => {
+            ["ID", "Grade", "Module", "Type", "Materials", "# of Copies", "Classroom", "Notes"].forEach(headerText => {
                 let th = document.createElement("th");
                 th.textContent = headerText;
                 th.style.border = "1px solid #5da4b6";
@@ -432,6 +432,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         let set = document.querySelector(`#set`);
         let cl = document.querySelector(`#classroom`);
+        let notes = document.querySelector(`#notes`);
 
         const searchInput = document.getElementById('set');
         const suggestionsList = document.getElementById('suggestions');
@@ -485,6 +486,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             const material = set.value;
             const classroom = cl.value;
             const numCheck = count;
+            const newnote = notes.value;
 
             if (!material || !classroom || numCheck <= 0) {
                 alert("Please fill in all checkout details.");
@@ -521,6 +523,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                             materials: material,
                             num_checked: numCheck,
                             classroom: classroom,
+                            notes: newnote,
                         }),
                     });
 

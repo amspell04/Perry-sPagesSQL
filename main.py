@@ -43,7 +43,7 @@ async def get_checkout():
 async def get_modalcontent():
     cf = pd.read_csv("check_data.csv")
 
-    check_data = cf[["check_id","el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom"]].values.tolist()
+    check_data = cf[["check_id","el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom", "notes"]].values.tolist()
 
     return check_data
 
@@ -55,6 +55,7 @@ async def add_checkout(checkout_data: dict = Body(...)):
     
     material = checkout_data["materials"]
     num_checked = checkout_data["num_checked"]
+    notes = checkout_data["notes"]
     copynumbertocheck = num_checked
 
     matching_rows = df[df["materials"] == material]
@@ -85,6 +86,10 @@ async def add_checkout(checkout_data: dict = Body(...)):
     # Generate a unique checkout ID
     checkout_id = str(uuid.uuid4())[:4]  
 
+    if(len(checkout_data["notes"]) <= 0):
+        checkout_data["notes"] = "No notes"
+    
+
     # Add checkout entry to check_data.csv
     new_checkout = {
         "check_id": checkout_id,
@@ -94,6 +99,7 @@ async def add_checkout(checkout_data: dict = Body(...)):
         "materials": material,
         "num_checked": num_checked,
         "classroom": checkout_data["classroom"],
+        "notes": checkout_data["notes"]
     }
     cf = pd.concat([cf, pd.DataFrame([new_checkout])], ignore_index=True)
     write_csv(cf, "check_data.csv")
