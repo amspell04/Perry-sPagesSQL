@@ -1,1 +1,3 @@
-check_id,el_grade,module_num,student_teacher,materials,num_checked,classroom,notes
+check_id,el_grade,module_num,student_teacher,materials,num_checked,classroom,notes,checkout_date
+8c78,2,1,Student,Dot,2,Amelia,dd,04/05/25
+039b,2,1,Teacher,"Dot, Off to Class, The Invisible Boy, The Important Book, Teacher Manuals",2,fl,No notes,04/05/25

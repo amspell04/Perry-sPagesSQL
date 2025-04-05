@@ -246,7 +246,6 @@ async function getcheckoutlist() {
     let div = document.createElement("div");
     div.className = 'checkout-box';
 
-    let materialsFilterInput = document.querySelector('#filtercheck');
 
     let table = document.createElement("table");
     table.style.borderCollapse = "collapse";
@@ -268,9 +267,31 @@ async function getcheckoutlist() {
     div.appendChild(table);
     body.appendChild(div);
 
+    let checkoutFilterInput = document.querySelector('#filtercheck');
+    checkoutFilterInput.addEventListener('input', applyFilters);
 
     console.log(checkoutdata)
     populateCheckoutTable(checkoutdata)
+
+    function applyFilters() {
+
+        const checkoutFilterValue = checkoutFilterInput.value.toLowerCase();
+
+        const filteredData = checkoutdata.filter(row => {
+            const classroom = String(row[3]).toLowerCase();
+
+            let classroommatch = true;
+
+    
+            if (checkoutFilterValue) {
+                classroommatch = classroom.includes(checkoutFilterValue);
+            }
+
+            return classroommatch;
+        });
+        populateCheckoutTable(filteredData);
+
+    }
 
     body.appendChild(div);
 
@@ -313,7 +334,7 @@ async function populateCheckoutTable(filteredData) {
 
             let thead = document.createElement("thead");
             let headerRow = document.createElement("tr");
-            ["ID", "Grade", "Module", "Type", "Materials", "# of Copies", "Classroom", "Notes"].forEach(headerText => {
+            ["ID", "Grade", "Module", "Type", "Materials", "# of Copies", "Classroom", "Notes", "Checkout Date"].forEach(headerText => {
                 let th = document.createElement("th");
                 th.textContent = headerText;
                 th.style.border = "1px solid #5da4b6";

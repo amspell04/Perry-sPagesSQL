@@ -2,6 +2,7 @@ import pandas as pd
 from fastapi import FastAPI, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 import uuid  # Import the uuid library
+import datetime
 
 app = FastAPI()
 
@@ -43,7 +44,7 @@ async def get_checkout():
 async def get_modalcontent():
     cf = pd.read_csv("check_data.csv")
 
-    check_data = cf[["check_id","el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom", "notes"]].values.tolist()
+    check_data = cf[["check_id","el_grade", "module_num", "student_teacher", "materials", "num_checked", "classroom", "notes", "checkout_date"]].values.tolist()
 
     return check_data
 
@@ -57,6 +58,10 @@ async def add_checkout(checkout_data: dict = Body(...)):
     num_checked = checkout_data["num_checked"]
     notes = checkout_data["notes"]
     copynumbertocheck = num_checked
+
+    currdate = datetime.datetime.now()
+    checkout_date = currdate.strftime("%x")
+
 
     matching_rows = df[df["materials"] == material]
     if matching_rows.empty:
@@ -99,7 +104,8 @@ async def add_checkout(checkout_data: dict = Body(...)):
         "materials": material,
         "num_checked": num_checked,
         "classroom": checkout_data["classroom"],
-        "notes": checkout_data["notes"]
+        "notes": checkout_data["notes"],
+        "checkout_date": checkout_date
     }
     cf = pd.concat([cf, pd.DataFrame([new_checkout])], ignore_index=True)
     write_csv(cf, "check_data.csv")
