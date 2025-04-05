@@ -610,3 +610,66 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+let reminder = document.querySelector('#reminder');
+reminder.addEventListener('click', async ()=>{
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+        let response = await fetch("http://127.0.0.1:8000/getmodalcontent");
+        let data = await response.json();
+
+        let modalcontent = document.querySelector('.modal-content');
+        modalcontent.innerHTML = " "
+        let table = document.createElement("table");
+        table.className = 'modaltable';
+        table.style.borderCollapse = "collapse";
+
+        let thead = document.createElement("thead");
+        let headerRow = document.createElement("tr");
+        ["ID", "Grade", "Module", "Type", "Materials", "# of Copies", "Classroom", "Notes", "Checkout Date", "Send Reminder"].forEach(headerText => {
+            let th = document.createElement("th");
+            th.textContent = headerText;
+            th.style.border = "1px solid #5da4b6";
+            th.style.padding = "8px";
+            headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        let modalTbody = document.createElement("tbody");
+        table.appendChild(modalTbody);
+
+        data.forEach(dataRow => {
+                let tr = document.createElement("tr");
+                dataRow.forEach(cellData => {
+                    let td = document.createElement("td");
+                    td.textContent = cellData;
+                    td.style.border = "1px solid #5da4b6";
+                    td.style.padding = "8px";
+                    tr.appendChild(td);
+                });
+
+                let remind = document.createElement("td");
+                let a = document.createElement("a");
+                a.href = "mailto:someone@example.com?cc=someoneelse@example.com&bcc=andsomeoneelse@example.com&subject=EL%20Checkin%20Reminder&body=Reminder%20to%20return%20the%20following%20EL%20materials:%0A%0A%20ID: " + dataRow[0] + "%0AMaterials: " + dataRow[4] + "%0ANumber of Copies: " + dataRow[5] + "%0ACheckout Date: " + dataRow[8]
+                a.textContent = "Send Reminder"
+                remind.style.border = "1px solid #5da4b6";
+                remind.style.borderRadius = "8px";
+                remind.style.padding = "8px";
+                remind.appendChild(a);
+                tr.appendChild(remind);
+
+                remind.addEventListener('click', sendreminder(dataRow[0], dataRow[4], dataRow[5], dataRow[8]))
+                modalTbody.appendChild(tr);
+            
+        });
+        let reminderinfo = document.createElement('p');
+        modalcontent.appendChild(table);
+        modalcontent.appendChild(reminderinfo);
+
+        function sendreminder(id, materials, numberofcopies, date){
+
+            console.log(id, materials, numberofcopies, date)
+        }
+})
